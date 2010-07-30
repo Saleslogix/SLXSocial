@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="af9d09d3-557b-4086-a127-de6314197cbe" lastModifiedUtc="2009-04-23T13:07:40.90125Z" name="TwitterUpdateStatus" methodType="Rule" actionType="None" returnMode="None">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="e693ac21-efb7-4dd8-b3eb-9196827693bf" paramName="UserName" sequence="0" paramType="String" />
+    <OrmEntityMethodParam id="3d96228c-9837-4e22-9133-e26bcbf12f0e" paramName="Password" sequence="0" paramType="String" />
+    <OrmEntityMethodParam id="2edbfb80-9d1d-49ff-874b-292458bfa6cb" paramName="Message" sequence="0" paramType="String" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="75da98ca-4b77-4c6c-8fca-b6ca25405eda" lastModifiedUtc="2009-04-23T13:07:20.104375Z" targetType="Sage.BusinessRules.CodeSnippets.ContactBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="TwitterUpdateStatusStep" active="true" codeSnippetId="28a3b2d8-6972-4b92-ab9c-4d13f6496e8b">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

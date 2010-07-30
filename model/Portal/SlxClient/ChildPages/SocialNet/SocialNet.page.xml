@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PortalPage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="fc228137-bcc8-43c6-8c62-84b2332e7018">
+  <PageAlias>SocialNet</PageAlias>
+  <LargeImage>[Localization!Global_Images:Groups_32x32]</LargeImage>
+  <TemplateUrl>Masters\base.master</TemplateUrl>
+  <InheritTemplate>false</InheritTemplate>
+  <InheritsFrom>Sage.Platform.WebPortal.WebPortalPage, Sage.Platform.WebPortal</InheritsFrom>
+  <Properties />
+  <TemplateProperties>
+    <Property Name="IncludeTaskPane" TypeConverter="">False</Property>
+  </TemplateProperties>
+  <IsDefaultPage>false</IsDefaultPage>
+  <ExcludedGlobalModules>
+    <guid>3b5adc5c-34a1-4456-b8a1-336d88387d03</guid>
+    <guid>fe19d709-77d0-4fe9-8908-f42d0473f6bb</guid>
+  </ExcludedGlobalModules>
+  <AppliedSecurity />
+</PortalPage>

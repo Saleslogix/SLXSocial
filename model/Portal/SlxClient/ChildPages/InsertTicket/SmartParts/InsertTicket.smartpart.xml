@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<SmartPartMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="67a4277d-1e40-4fed-822d-e1865da4a05d">
+  <SmartPartId>InsertTicket</SmartPartId>
+  <ReferencedModelId>00000000-0000-0000-0000-000000000000</ReferencedModelId>
+  <SmartPart>SmartParts\Ticket\InsertTicket.ascx</SmartPart>
+  <TargetWorkspace>MainContent</TargetWorkspace>
+  <ShowInMode>Insert</ShowInMode>
+  <Properties />
+  <AllowRoles />
+</SmartPartMapping>

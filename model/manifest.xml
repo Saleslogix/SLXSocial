@@ -1,0 +1,1538 @@
+<?xml version="1.0"?>
+<BundleManifest id="ca5f52ee-aa59-4fd2-b809-768fb0b5a35c">
+  <bundleProperties>
+    <name>SalesLogix Social Integration </name>
+    <description><![CDATA[]]></description>
+    <address><![CDATA[]]></address>
+    <company>Sage Software</company>
+    <copyright><![CDATA[]]></copyright>
+    <majorVersion>0</majorVersion>
+    <minorVersion>0</minorVersion>
+    <revision>0</revision>
+    <build>1</build>
+    <autoIncrement>false</autoIncrement>
+    <installDate>0001-01-01T00:00:00</installDate>
+    <installPassword />
+  </bundleProperties>
+  <bundleItemHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.BundleManifestItem, Sage.Platform.BundleModel">
+      <BundleManifestItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>ca5f52ee-aa59-4fd2-b809-768fb0b5a35c</ItemId>
+        <Url>\</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>SalesLogix Social Integration </Caption>
+      </BundleManifestItem>
+      <children>
+        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityModelContext, Sage.Platform">
+          <EntityModelContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <ItemId>entitymodel</ItemId>
+            <Url>\::Entity Model</Url>
+            <BundleItemType>Container</BundleItemType>
+            <Caption>Entity Model</Caption>
+          </EntityModelContext>
+          <children>
+            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackagesContext, Sage.Platform">
+              <PackagesContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>entitymodel\packages</ItemId>
+                <Url>\::Entity Model::Packages</Url>
+                <BundleItemType>Container</BundleItemType>
+                <Caption>Packages</Caption>
+              </PackagesContext>
+              <children>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackageBundleItem, Sage.Platform">
+                  <PackageBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>7ddc7cbe-e71d-483a-8599-6c5c483ee050</ItemId>
+                    <Url>\Entity Model\SalesLogix Application Entities\SalesLogix Application Entities.T.package.xml</Url>
+                    <BundleItemType>Context</BundleItemType>
+                    <Caption>SalesLogix Application Entities</Caption>
+                  </PackageBundleItem>
+                  <children>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>ebfd715e-2b2f-4e5e-8c6d-cfc0d9b4ae52</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Account</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>ebfd715e-2b2f-4e5e-8c6d-cfc0d9b4ae52properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>ad5b3fff-a0f8-4d84-ae4f-b45e6a6ba0b1</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField1</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField1</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>9bc8b080-fcbc-4547-b1e1-ba7ebfcdc6b8</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField10</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField10</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>9a0eaa50-dbdf-4c86-a09b-e723ad21d541</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField2</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField2</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>dbc39482-7cd5-4e35-a9d5-7c995ffb525e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField3</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField3</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>23d5fb05-649c-4cbd-9071-52dadf3c5f7e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField4</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField4</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>dc8979d6-25ab-4feb-9c32-675ff2c0ee33</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField5</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField5</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>43a5b767-434f-4289-bdd2-ee8b66da8d72</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField6</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField6</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>9022b24e-2102-4681-90f1-231d79a7608d</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField7</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField7</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>1f63de3b-5569-489d-b955-2a2d95a20c57</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField8</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField8</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>ca18f661-f780-48cb-a114-5a58dfd18fb0</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Account\Account.ACCOUNT.entity.xml::Properties::UserField9</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField9</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>750a7f26-3604-467b-94fe-249370231df4</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Contact</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>750a7f26-3604-467b-94fe-249370231df4properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>993a4555-d960-4d21-94ca-7e8eb4b1e218</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField1</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField1</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>db5f43cc-1918-464b-92f9-3912f99d618f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField10</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField10</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>7c8b7b1a-685c-4498-b21f-d134bfa9ca97</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField2</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField2</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>120cc520-67f5-48a2-83b9-a09cff35f25f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField3</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField3</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>e4d2b73e-0c5e-430a-9f1f-515f25bb7a55</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField4</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField4</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>54e973eb-5514-4e86-9e39-fa0f93e3546a</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField5</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField5</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>126ea415-8d4c-4351-8207-b624c69e1443</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField6</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField6</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>220a5b71-aafb-449a-abc8-46fb8f8daf06</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField7</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField7</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>5d404509-aafd-438e-a7b4-fdb288365480</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField8</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField8</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>825c5964-2321-4444-ade4-91eb4b938ca8</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::UserField9</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField9</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>a773ba9a-4678-4410-9fdc-e05f170a8b58</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::SkypeId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SkypeId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8bd2b07b-a974-4a07-8442-82f0d2f1df8d</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::AOLId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AOLId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>df95b0b8-6b01-4dc9-929a-4611261b86f6</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::GoogleId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>GoogleId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>57e962a8-37f4-4cd7-b16d-1b211f5db883</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::YahooId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>YahooId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>277c9fb9-7a54-4b12-9b3b-a6a32432aaf2</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::WinLiveId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>WinLiveId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fa16314e-770a-452d-b7ab-2b13f38eb73a</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::LinkedInId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>LinkedInId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fd50dc4f-f88c-40a2-987e-574dbf81cc33</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Properties::TwitterId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TwitterId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>750a7f26-3604-467b-94fe-249370231df4rules</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Business Rules</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Business Rules</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml</ParentUrl>
+                            <CaptionKey>rules</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8e25d0e8-6a50-4798-a2ad-f8e1e0c7a45b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>TwitterDirectMessage</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8e25d0e8-6a50-4798-a2ad-f8e1e0c7a45bpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8e25d0e8-6a50-4798-a2ad-f8e1e0c7a45bprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>8f3abd11-c940-45da-9e68-7a2e249a19fe</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml::Primary Steps::TwitterDirectMessageStep</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>TwitterDirectMessageStep</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8e25d0e8-6a50-4798-a2ad-f8e1e0c7a45bpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8e25d0e8-6a50-4798-a2ad-f8e1e0c7a45bpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterDirectMessage.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>af9d09d3-557b-4086-a127-de6314197cbe</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>TwitterUpdateStatus</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>af9d09d3-557b-4086-a127-de6314197cbepre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>af9d09d3-557b-4086-a127-de6314197cbeprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>75da98ca-4b77-4c6c-8fca-b6ca25405eda</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml::Primary Steps::TwitterUpdateStatusStep</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>TwitterUpdateStatusStep</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>af9d09d3-557b-4086-a127-de6314197cbepost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>af9d09d3-557b-4086-a127-de6314197cbepostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUpdateStatus.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>34d28c1d-518d-4bd8-a7e4-0f832036b28b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>TwitterUserTweets</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>34d28c1d-518d-4bd8-a7e4-0f832036b28bpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>34d28c1d-518d-4bd8-a7e4-0f832036b28bprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>b3b2e55b-1aa0-48ed-b4e9-60781b278906</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml::Primary Steps::TwitterUserTweetsStep</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>TwitterUserTweetsStep</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>34d28c1d-518d-4bd8-a7e4-0f832036b28bpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>34d28c1d-518d-4bd8-a7e4-0f832036b28bpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\TwitterUserTweets.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>750a7f26-3604-467b-94fe-249370231df4quickforms</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml::Forms</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Forms</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Contact\Contact.CONTACT.entity.xml</ParentUrl>
+                            <CaptionKey>quickforms</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c2b4fd47-1d6e-4954-a507-dc6230e14927</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\QuickForms\ContactMisc.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>ContactMisc</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>5d048c17-ea8c-47d4-99c3-ad213f17a06b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Contact\QuickForms\frmTwitter.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>frmTwitter</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>aa22326e-6c3b-4a21-9518-0fb886e370d1</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Defect</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>aa22326e-6c3b-4a21-9518-0fb886e370d1properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>ad31304a-aa9f-4821-81b7-a0c6ea954f66</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml::Properties::LinkUrl</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>LinkUrl</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>aa22326e-6c3b-4a21-9518-0fb886e370d1quickforms</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml::Forms</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Forms</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Defect\Defect.DEFECT.entity.xml</ParentUrl>
+                            <CaptionKey>quickforms</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>e104519b-2d01-42e0-bb4e-a4de9bd82144</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Defect\QuickForms\DefectDetails.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>DefectDetails</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f70bdef0-baac-485c-9463-8810748276ea</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Defect\QuickForms\InsertDefect.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>InsertDefect</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+              </children>
+            </bundleItem>
+            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipsContext, Sage.Platform">
+              <RelationshipsContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>entitymodel\relationships</ItemId>
+                <Url>\::Entity Model::Relationships</Url>
+                <BundleItemType>Container</BundleItemType>
+                <Caption>Relationships</Caption>
+              </RelationshipsContext>
+            </bundleItem>
+          </children>
+        </bundleItem>
+        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ManagerBundleItem, Sage.Platform.WebPortal.Design">
+          <ManagerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <ItemId>\Portal</ItemId>
+            <Url>\Portal</Url>
+            <BundleItemType>Container</BundleItemType>
+            <Caption>Portals</Caption>
+          </ManagerBundleItem>
+          <children>
+            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>861ac5fe-b571-4015-a55d-bf63e400e1e7</ItemId>
+                <Url>\Portal\SlxClient\SlxClient.portal.xml</Url>
+                <BundleItemType>Context</BundleItemType>
+                <Caption>Sage SalesLogix</Caption>
+              </ModelItemBundleItem>
+              <children>
+                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                  <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles</ItemId>
+                    <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles</Url>
+                    <BundleItemType>Context</BundleItemType>
+                    <Caption>SupportFiles</Caption>
+                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                  </LinkedFolderBundleItem>
+                  <children>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                      <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\App_Code</ItemId>
+                        <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\App_Code</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>App_Code</Caption>
+                        <InstallOptions>SkipItemAndChildren</InstallOptions>
+                      </LinkedFolderBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SupportFiles\App_Code\LinkHandler.cs</ItemId>
+                            <Url>\Portal\SlxClient\SupportFiles\App_Code\LinkHandler.cs</Url>
+                            <BundleItemType>Other</BundleItemType>
+                            <Caption>LinkHandler.cs</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                            <IsLinkedFile>false</IsLinkedFile>
+                            <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\App_Code\LinkHandler.cs</SourcePath>
+                            <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                            <ProjectPath>SupportFiles\App_Code\LinkHandler.cs</ProjectPath>
+                          </LinkedFileBundleItem>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                      <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\Bin</ItemId>
+                        <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\Bin</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Bin</Caption>
+                        <InstallOptions>SkipItemAndChildren</InstallOptions>
+                      </LinkedFolderBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SupportFiles\Bin\Twitterizer.Framework.dll</ItemId>
+                            <Url>\Portal\SlxClient\SupportFiles\Bin\Twitterizer.Framework.dll</Url>
+                            <BundleItemType>Other</BundleItemType>
+                            <Caption>Twitterizer.Framework.dll</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                            <IsLinkedFile>false</IsLinkedFile>
+                            <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\Bin\Twitterizer.Framework.dll</SourcePath>
+                            <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                            <ProjectPath>SupportFiles\Bin\Twitterizer.Framework.dll</ProjectPath>
+                          </LinkedFileBundleItem>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                      <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\images</ItemId>
+                        <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\images</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>images</Caption>
+                        <InstallOptions>SkipItemAndChildren</InstallOptions>
+                      </LinkedFolderBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\images\icons</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\images\icons</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>icons</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\FaceBook-24x24.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\FaceBook-24x24.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>FaceBook-24x24.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\FaceBook-24x24.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\FaceBook-24x24.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Google-24x24.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Google-24x24.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Google-24x24.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Google-24x24.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Google-24x24.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Linked-In-24x24.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Linked-In-24x24.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Linked-In-24x24.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Linked-In-24x24.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Linked-In-24x24.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Linked-In-32x32.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Linked-In-32x32.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Linked-In-32x32.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Linked-In-32x32.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Linked-In-32x32.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Twitter-16x16.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Twitter-16x16.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Twitter-16x16.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Twitter-16x16.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Twitter-16x16.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Twitter-24x24.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Twitter-24x24.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Twitter-24x24.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Twitter-24x24.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Twitter-24x24.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\images\icons\Twitter-32x32.png</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\images\icons\Twitter-32x32.png</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Twitter-32x32.png</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\images\icons\Twitter-32x32.png</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\images\icons\Twitter-32x32.png</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                      <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\jscript</ItemId>
+                        <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\jscript</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>jscript</Caption>
+                        <InstallOptions>SkipItemAndChildren</InstallOptions>
+                      </LinkedFolderBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\jscript\sage-common</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\jscript\sage-common</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>sage-common</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\jscript\sage-common\ClientLinkHandler.js</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\jscript\sage-common\ClientLinkHandler.js</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ClientLinkHandler.js</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\jscript\sage-common\ClientLinkHandler.js</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\jscript\sage-common\ClientLinkHandler.js</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SupportFiles\jscript\sage-socialpanel.js</ItemId>
+                            <Url>\Portal\SlxClient\SupportFiles\jscript\sage-socialpanel.js</Url>
+                            <BundleItemType>Other</BundleItemType>
+                            <Caption>sage-socialpanel.js</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                            <IsLinkedFile>false</IsLinkedFile>
+                            <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\jscript\sage-socialpanel.js</SourcePath>
+                            <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                            <ProjectPath>SupportFiles\jscript\sage-socialpanel.js</ProjectPath>
+                          </LinkedFileBundleItem>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                      <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts</ItemId>
+                        <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>SmartParts</Caption>
+                        <InstallOptions>SkipItemAndChildren</InstallOptions>
+                      </LinkedFolderBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Activity</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Activity</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>Activity</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Activity\ActivityDetails.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Activity\ActivityDetails.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ActivityDetails.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Activity\ActivityDetails.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Activity\ActivityDetails.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\ClientLinkHandler</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\ClientLinkHandler</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>ClientLinkHandler</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\ClientLinkHandler\ClientLinkHandler.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\ClientLinkHandler\ClientLinkHandler.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ClientLinkHandler.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\ClientLinkHandler\ClientLinkHandler.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\ClientLinkHandler\ClientLinkHandler.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Defect</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Defect</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>Defect</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Defect\App_LocalResources</ItemId>
+                                <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Defect\App_LocalResources</Url>
+                                <BundleItemType>Context</BundleItemType>
+                                <Caption>App_LocalResources</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                              </LinkedFolderBundleItem>
+                              <children>
+                                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                                  <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Defect\App_LocalResources\InsertDefect.ascx.resx</ItemId>
+                                    <Url>\Portal\SlxClient\SupportFiles\SmartParts\Defect\App_LocalResources\InsertDefect.ascx.resx</Url>
+                                    <BundleItemType>Other</BundleItemType>
+                                    <Caption>InsertDefect.ascx.resx</Caption>
+                                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                    <IsLinkedFile>false</IsLinkedFile>
+                                    <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Defect\App_LocalResources\InsertDefect.ascx.resx</SourcePath>
+                                    <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                    <ProjectPath>SupportFiles\SmartParts\Defect\App_LocalResources\InsertDefect.ascx.resx</ProjectPath>
+                                  </LinkedFileBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Defect\InsertDefect.ascx</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Defect\InsertDefect.ascx</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>InsertDefect.ascx</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Defect\InsertDefect.ascx</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Defect\InsertDefect.ascx</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\History</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\History</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>History</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\History\InsertNote.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\History\InsertNote.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>InsertNote.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\History\InsertNote.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\History\InsertNote.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Options</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Options</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>Options</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>frmTwitterOptions.ascx</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Options\frmTwitterOptions.ascx</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>frmTwitterOptions.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Options\frmTwitterOptions.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Options\frmTwitterOptions.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SocialMedia.ascx</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Options\SocialMedia.ascx</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SocialMedia.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Options\SocialMedia.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Options\SocialMedia.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Social</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Social</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>Social</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Social\App_LocalResources</ItemId>
+                                <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Social\App_LocalResources</Url>
+                                <BundleItemType>Context</BundleItemType>
+                                <Caption>App_LocalResources</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                              </LinkedFolderBundleItem>
+                              <children>
+                                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                                  <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Social\App_LocalResources\SocialList.ascx.resx</ItemId>
+                                    <Url>\Portal\SlxClient\SupportFiles\SmartParts\Social\App_LocalResources\SocialList.ascx.resx</Url>
+                                    <BundleItemType>Other</BundleItemType>
+                                    <Caption>SocialList.ascx.resx</Caption>
+                                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                    <IsLinkedFile>false</IsLinkedFile>
+                                    <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Social\App_LocalResources\SocialList.ascx.resx</SourcePath>
+                                    <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                    <ProjectPath>SupportFiles\SmartParts\Social\App_LocalResources\SocialList.ascx.resx</ProjectPath>
+                                  </LinkedFileBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SocialList.ascx</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Social\SocialList.ascx</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx.cs</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx.cs</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SocialList.ascx.cs</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Social\SocialList.ascx.cs</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Social\SocialList.ascx.cs</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\TaskPane</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\TaskPane</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>TaskPane</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\TaskPane\CommonTasks</ItemId>
+                                <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\TaskPane\CommonTasks</Url>
+                                <BundleItemType>Context</BundleItemType>
+                                <Caption>CommonTasks</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                              </LinkedFolderBundleItem>
+                              <children>
+                                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                                  <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx</ItemId>
+                                    <Url>\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx</Url>
+                                    <BundleItemType>Other</BundleItemType>
+                                    <Caption>Twitter.ascx</Caption>
+                                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                    <IsLinkedFile>false</IsLinkedFile>
+                                    <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx</SourcePath>
+                                    <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                    <ProjectPath>SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx</ProjectPath>
+                                  </LinkedFileBundleItem>
+                                </bundleItem>
+                                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                                  <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx.cs</ItemId>
+                                    <Url>\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx.cs</Url>
+                                    <BundleItemType>Other</BundleItemType>
+                                    <Caption>Twitter.ascx.cs</Caption>
+                                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                    <IsLinkedFile>false</IsLinkedFile>
+                                    <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx.cs</SourcePath>
+                                    <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                    <ProjectPath>SupportFiles\SmartParts\TaskPane\CommonTasks\Twitter.ascx.cs</ProjectPath>
+                                  </LinkedFileBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                          <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Ticket</ItemId>
+                            <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Ticket</Url>
+                            <BundleItemType>Context</BundleItemType>
+                            <Caption>Ticket</Caption>
+                            <InstallOptions>SkipItemAndChildren</InstallOptions>
+                          </LinkedFolderBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFolderBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFolderBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Ticket\App_LocalResources</ItemId>
+                                <Url>\Portal\SlxClient\SlxClient.portal.xml\SupportFiles\SmartParts\Ticket\App_LocalResources</Url>
+                                <BundleItemType>Context</BundleItemType>
+                                <Caption>App_LocalResources</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                              </LinkedFolderBundleItem>
+                              <children>
+                                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                                  <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Ticket\App_LocalResources\InsertTicket.ascx.resx</ItemId>
+                                    <Url>\Portal\SlxClient\SupportFiles\SmartParts\Ticket\App_LocalResources\InsertTicket.ascx.resx</Url>
+                                    <BundleItemType>Other</BundleItemType>
+                                    <Caption>InsertTicket.ascx.resx</Caption>
+                                    <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                    <IsLinkedFile>false</IsLinkedFile>
+                                    <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Ticket\App_LocalResources\InsertTicket.ascx.resx</SourcePath>
+                                    <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                    <ProjectPath>SupportFiles\SmartParts\Ticket\App_LocalResources\InsertTicket.ascx.resx</ProjectPath>
+                                  </LinkedFileBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.LinkedFileBundleItem, Sage.Platform.WebPortal.Design">
+                              <LinkedFileBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>\Portal\SlxClient\SupportFiles\SmartParts\Ticket\InsertTicket.ascx</ItemId>
+                                <Url>\Portal\SlxClient\SupportFiles\SmartParts\Ticket\InsertTicket.ascx</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>InsertTicket.ascx</Caption>
+                                <InstallOptions>SkipItemAndChildren</InstallOptions>
+                                <IsLinkedFile>false</IsLinkedFile>
+                                <SourcePath>C:\Development\SalesLogix 753 Social\Model\Portal\SlxClient\SupportFiles\SmartParts\Ticket\InsertTicket.ascx</SourcePath>
+                                <ParentModelItemUrl>\Portal\SlxClient\SlxClient.portal.xml</ParentModelItemUrl>
+                                <ProjectPath>SupportFiles\SmartParts\Ticket\InsertTicket.ascx</ProjectPath>
+                              </LinkedFileBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                  <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>\Portal\SlxClient\SlxClient.portal.xml\Tasklets</ItemId>
+                    <Url>\Portal\SlxClient\SlxClient.portal.xml\Tasklets</Url>
+                    <BundleItemType>Container</BundleItemType>
+                    <Caption>Tasklets</Caption>
+                  </ContainerBundleItem>
+                  <children>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>4a964747-5d9e-4a12-bef1-f67dae9c0a54</ItemId>
+                        <Url>\Portal\SlxClient\Tasklets\Twitter.tasklet.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Twitter</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>33ce81cc-0828-49ac-bdae-8f9c071c4c46</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                  <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>\Portal\SlxClient\SlxClient.portal.xml\NavigationGroups</ItemId>
+                    <Url>\Portal\SlxClient\SlxClient.portal.xml\NavigationGroups</Url>
+                    <BundleItemType>Container</BundleItemType>
+                    <Caption>Navigation</Caption>
+                  </ContainerBundleItem>
+                  <children>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>3a89fa9f-d016-4f90-89cf-7081b75101c0</ItemId>
+                        <Url>\Portal\SlxClient\NavGroups\Social\Social.navgroup.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Social</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>1b945d1b-ba15-4244-b5e7-416fc549cf22</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                          <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>034745ae-9969-4b84-8cb7-f762464172d4</ItemId>
+                            <Url>\Portal\SlxClient\NavGroups\Social\NavItems\SocialNetworking.navitem.xml</Url>
+                            <BundleItemType>ModelItem</BundleItemType>
+                            <Caption>Social Queue</Caption>
+                            <InstallOrderOptions>
+                              <BeforeAll>true</BeforeAll>
+                              <InstallAfter>00000000-0000-0000-0000-000000000000</InstallAfter>
+                            </InstallOrderOptions>
+                          </ModelItemBundleItem>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                  <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>\Portal\SlxClient\SlxClient.portal.xml\ContextMenuItems</ItemId>
+                    <Url>\Portal\SlxClient\SlxClient.portal.xml\ContextMenuItems</Url>
+                    <BundleItemType>Container</BundleItemType>
+                    <Caption>Context Menus</Caption>
+                  </ContainerBundleItem>
+                </bundleItem>
+                <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                  <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>\Portal\SlxClient\SlxClient.portal.xml\Pages</ItemId>
+                    <Url>\Portal\SlxClient\SlxClient.portal.xml\Pages</Url>
+                    <BundleItemType>Container</BundleItemType>
+                    <Caption>Pages</Caption>
+                  </ContainerBundleItem>
+                  <children>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>add721e9-224c-4921-8e16-b4c6953d48ef</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\UserOptions\UserOptions.page.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Options</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>fbf286ee-13b3-4330-a59a-6734782314da</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                          <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\ChildPages\UserOptions\UserOptions.page.xml\SmartParts</ItemId>
+                            <Url>\Portal\SlxClient\ChildPages\UserOptions\UserOptions.page.xml\SmartParts</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>SmartParts</Caption>
+                          </ContainerBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b357afed-3385-49a8-af6b-c80391932933</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\UserOptions\SmartParts\frmTwitterOptions.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>frmTwitterOptions (Custom)</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>false</BeforeAll>
+                                  <InstallAfter>99d84a6a-9ab1-4a12-9ebb-deaf4c1280a8</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>99d84a6a-9ab1-4a12-9ebb-deaf4c1280a8</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\UserOptions\SmartParts\SocialMedia.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SocialMedia (Custom)</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>false</BeforeAll>
+                                  <InstallAfter>e1bcfa9b-b20d-477b-a629-dcfe88ffc445</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>fc228137-bcc8-43c6-8c62-84b2332e7018</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\SocialNet\SocialNet.page.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Social Queue</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>b76162ea-2f0a-499e-9f0c-27280eb2f314</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                          <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\ChildPages\SocialNet\SocialNet.page.xml\SmartParts</ItemId>
+                            <Url>\Portal\SlxClient\ChildPages\SocialNet\SocialNet.page.xml\SmartParts</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>SmartParts</Caption>
+                          </ContainerBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b294314c-a66b-428e-9885-36cfc34e0483</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\SocialNet\SmartParts\SocialList.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SocialList (Custom)</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>true</BeforeAll>
+                                  <InstallAfter>00000000-0000-0000-0000-000000000000</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>4ee7fa40-6c27-466d-813f-6126c76ebc47</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\InsertTicket\InsertTicket.page.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Insert Ticket</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>2d3475c2-dcb6-44e0-a862-f01c8c395f4c</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                          <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\ChildPages\InsertTicket\InsertTicket.page.xml\SmartParts</ItemId>
+                            <Url>\Portal\SlxClient\ChildPages\InsertTicket\InsertTicket.page.xml\SmartParts</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>SmartParts</Caption>
+                          </ContainerBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>67a4277d-1e40-4fed-822d-e1865da4a05d</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\InsertTicket\SmartParts\InsertTicket.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>InsertTicket (Custom)</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>true</BeforeAll>
+                                  <InstallAfter>00000000-0000-0000-0000-000000000000</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>a698b46d-302f-46ee-b60a-363d29dedce7</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\InsertDefect\InsertDefect.page.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Insert Defect</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>b0e7effd-b4f9-40c2-b339-0a5e047de367</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>f8923dd2-079e-427b-af12-bf6f5e444322</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\Contact\Contact.page.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Contact Detail</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>false</BeforeAll>
+                          <InstallAfter>03ce8c6d-5c18-4e37-b6b7-7ea1c1751257</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                      <children>
+                        <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ContainerBundleItem, Sage.Platform.WebPortal.Design">
+                          <ContainerBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>\Portal\SlxClient\ChildPages\Contact\Contact.page.xml\SmartParts</ItemId>
+                            <Url>\Portal\SlxClient\ChildPages\Contact\Contact.page.xml\SmartParts</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>SmartParts</Caption>
+                          </ContainerBundleItem>
+                          <children>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>701895bb-0fcd-4e7b-bc85-a64d33555541</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\Contact\SmartParts\ContactMisc.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>ContactMisc</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>false</BeforeAll>
+                                  <InstallAfter>73e487fa-e6a4-45b1-98cd-d78d91e85c3c</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                              <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fa552bdb-9aa5-4b7f-84b0-3cd6727bc03b</ItemId>
+                                <Url>\Portal\SlxClient\ChildPages\Contact\SmartParts\frmTwitter.smartpart.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>frmTwitter</Caption>
+                                <InstallOrderOptions>
+                                  <BeforeAll>false</BeforeAll>
+                                  <InstallAfter>701895bb-0fcd-4e7b-bc85-a64d33555541</InstallAfter>
+                                </InstallOrderOptions>
+                              </ModelItemBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="73d4e7d0-a7fa-40ae-8b45-1ad7ed954154" itemTypeName="Sage.Platform.WebPortal.Design.BundleSupport.ModelItemBundleItem, Sage.Platform.WebPortal.Design">
+                      <ModelItemBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>518351c3-c2a1-4e88-8f1c-e26cfbf31ae8</ItemId>
+                        <Url>\Portal\SlxClient\ChildPages\Account\Account.page.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>Account Detail</Caption>
+                        <InstallOrderOptions>
+                          <BeforeAll>true</BeforeAll>
+                          <InstallAfter>00000000-0000-0000-0000-000000000000</InstallAfter>
+                        </InstallOrderOptions>
+                      </ModelItemBundleItem>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+              </children>
+            </bundleItem>
+          </children>
+        </bundleItem>
+      </children>
+    </bundleItem>
+  </bundleItemHierarchy>
+  <bundleActionHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.RootBundleAction, Sage.Platform.BundleModel">
+      <RootBundleAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>\Actions</ItemId>
+        <Url>\Actions</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Bundle Actions</Caption>
+      </RootBundleAction>
+    </bundleItem>
+  </bundleActionHierarchy>
+  <itemsToDelete />
+  <globalResources />
+</BundleManifest>
