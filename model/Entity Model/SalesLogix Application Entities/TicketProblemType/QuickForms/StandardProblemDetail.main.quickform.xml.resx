@@ -117,55 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AOLId.Caption" xml:space="preserve">
-    <value>AOLId</value>
+  <data name="Description.Caption" xml:space="preserve">
+    <value>Description:</value>
   </data>
-  <data name="LinkedInId.Caption" xml:space="preserve">
-    <value>LinkedInId</value>
+  <data name="dlueArea.Caption" xml:space="preserve">
+    <value>Description</value>
   </data>
-  <data name="SkypeId.Caption" xml:space="preserve">
-    <value>SkypeId</value>
+  <data name="Notes.Caption" xml:space="preserve">
+    <value>Notes:</value>
   </data>
-  <data name="TwitterId.Caption" xml:space="preserve">
-    <value>TwitterId</value>
+  <data name="dlueArea.DependentLookups..PropertyDisplay" xml:space="preserve">
+    <value />
   </data>
-  <data name="UserField1.Caption" xml:space="preserve">
-    <value>User Field1</value>
+  <data name="dlueArea.DependentLookups.Area.PropertyDisplay" xml:space="preserve">
+    <value>Area:</value>
   </data>
-  <data name="UserField10.Caption" xml:space="preserve">
-    <value>User Field10</value>
+  <data name="dlueArea.DependentLookups.Category.PropertyDisplay" xml:space="preserve">
+    <value>Category:</value>
   </data>
-  <data name="UserField2.Caption" xml:space="preserve">
-    <value>User Field2</value>
+  <data name="dlueArea.DependentLookups.Issue.PropertyDisplay" xml:space="preserve">
+    <value>Issue:</value>
   </data>
-  <data name="UserField3.Caption" xml:space="preserve">
-    <value>User Field3</value>
+  <data name="btnDelete.ToolTip" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="UserField4.Caption" xml:space="preserve">
-    <value>User Field4</value>
+  <data name="btnDelete.ActionConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this Standard Problem?</value>
   </data>
-  <data name="UserField5.Caption" xml:space="preserve">
-    <value>User Field5</value>
+  <data name="dlueArea.ButtonToolTip" xml:space="preserve">
+    <value>Find</value>
   </data>
-  <data name="UserField6.Caption" xml:space="preserve">
-    <value>User Field6</value>
+  <data name="Description.ToolTip" xml:space="preserve">
+    <value>Description for standard problem</value>
   </data>
-  <data name="UserField7.Caption" xml:space="preserve">
-    <value>User Field7</value>
+  <data name="Notes.ToolTip" xml:space="preserve">
+    <value>Notes for standard problem</value>
   </data>
-  <data name="UserField8.Caption" xml:space="preserve">
-    <value>User Field8</value>
-  </data>
-  <data name="UserField9.Caption" xml:space="preserve">
-    <value>User Field9</value>
-  </data>
-  <data name="WinLiveId.Caption" xml:space="preserve">
-    <value>WinLiveId</value>
-  </data>
-  <data name="YahooId.Caption" xml:space="preserve">
-    <value>YahooId</value>
-  </data>
-  <data name="cmdSave.Caption" xml:space="preserve">
+  <data name="btnSave.ToolTip" xml:space="preserve">
     <value>Save</value>
   </data>
 </root>

@@ -803,12 +803,12 @@ public class LinkHandler
 
     public void CreateThreat(Dictionary<string, string> args)
     {
-        RedirectToAction("~/TicketProblemType.aspx?ModeId=insert", args);
+        RedirectToAction("~/InsertTicketProblem.aspx?ModeId=insert", args);
     }
 
     public void CreateBullet(Dictionary<string, string> args)
     {
-        RedirectToAction("~/TicketProblemType.aspx?ModeId=insert", args);
+        RedirectToAction("~/InsertTicketProblem.aspx?ModeId=insert", args);
     }
 
     private void RedirectToAction(string url, Dictionary<string, string> args)

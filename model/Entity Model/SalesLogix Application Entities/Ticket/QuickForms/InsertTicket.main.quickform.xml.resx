@@ -126,12 +126,6 @@
   <data name="7dd7721e-03d5-4af0-93cd-b8075c391afd.Message" xml:space="preserve">
     <value>Please select an Account before continuing.</value>
   </data>
-  <data name="cmdDescDateStamp.ToolTip" xml:space="preserve">
-    <value>User Date Stamp</value>
-  </data>
-  <data name="cmdResDateStamp.ToolTip" xml:space="preserve">
-    <value>User Date Stamp</value>
-  </data>
   <data name="cmdSave.Caption" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -312,9 +306,6 @@
   <data name="txtDescriptions.Caption" xml:space="preserve">
     <value>Description:</value>
   </data>
-  <data name="cmdSpeedSearch.ToolTip" xml:space="preserve">
-    <value>SpeedSearch</value>
-  </data>
   <data name="119d394c-cef4-4b1e-aa83-e9a9c005df4e.Title" xml:space="preserve">
     <value>SalesLogix</value>
   </data>
@@ -359,5 +350,38 @@
   </data>
   <data name="cmdPunchOut.Caption" xml:space="preserve">
     <value>Punch Out</value>
+  </data>
+  <data name="lueStandardProblem.ButtonToolTip" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="lueStandardResolution.ButtonToolTip" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="lueStandardProblem.LookupProperties.Area.PropertyHeader" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="lueStandardProblem.LookupProperties.Category.PropertyHeader" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="lueStandardProblem.LookupProperties.Description.PropertyHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lueStandardProblem.LookupProperties.Issue.PropertyHeader" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="lueStandardResolution.LookupProperties.Description.PropertyHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="cmdSpeedSearchProblem.ToolTip" xml:space="preserve">
+    <value>SpeedSearch</value>
+  </data>
+  <data name="cmdSpeedSearch.ToolTip" xml:space="preserve">
+    <value>SpeedSearch</value>
+  </data>
+  <data name="cmdDescDateStamp.ToolTip" xml:space="preserve">
+    <value>Add problem timestamp</value>
+  </data>
+  <data name="cmdResDateStamp.ToolTip" xml:space="preserve">
+    <value>Add resolution timestamp</value>
   </data>
 </root>

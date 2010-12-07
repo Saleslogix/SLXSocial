@@ -12,6 +12,7 @@ using Sage.Platform.WebPortal;
 using Sage.Platform.Application;
 using Sage.Platform.Application.Services;
 using Sage.Entity.Interfaces;
+using TwitterVB2;
 
 public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.UserControl
 {
@@ -52,26 +53,39 @@ public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.Use
         }
     }
 
+    TwitterAPI GetAPI()
+    {
+        IUserOptionsService userOption = ApplicationContext.Current.Services.Get<IUserOptionsService>();
+
+
+        string AccessToken = userOption.GetCommonOption("AccessToken", "Twitter");
+        if (!string.IsNullOrEmpty(AccessToken))
+        {
+            string AccessTokenSecret = userOption.GetCommonOption("AccessTokenSecret", "Twitter");
+            string ConsumerKey = userOption.GetCommonOption("ConsumerKey", "Twitter");
+            string ConsumerSecret = userOption.GetCommonOption("ConsumerSecret", "Twitter");
+
+            TwitterAPI api = new TwitterAPI();
+            api.AuthenticateWith(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret);
+            return api;
+        }
+
+        return null;
+
+    }
+
+
     protected void cmdUpdateStatus_Click(object sender, EventArgs e)
     {
-        IUserOptionsService userOption =
-            Sage.Platform.Application.ApplicationContext.Current.Services.Get<IUserOptionsService>();
-        
-        string userName = userOption.GetCommonOption("UserName", "Twitter");
-	    string passWord = userOption.GetCommonOption("Password", "Twitter");
-	
-	    if (!String.IsNullOrEmpty(userName) & !String.IsNullOrEmpty(passWord) & !String.IsNullOrEmpty(txtStatus.Text))
-	    {
-            try
-            {
-                Twitterizer.Framework.Twitter t = new Twitterizer.Framework.Twitter(userName, passWord);
-                t.Status.Update(txtStatus.Text);
-            }
-            catch (Exception ex)
-            {
 
+        if (!String.IsNullOrEmpty(txtStatus.Text))
+        {
+            TwitterAPI api = GetAPI();
+            if (api != null)
+            {
+                api.Update(txtStatus.Text);
             }
-	    }
+        }
     }
 
     protected void cmdDirectMessage_Click(object sender, EventArgs e)
@@ -81,63 +95,64 @@ public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.Use
 
     protected void SendMessage()
     {
-         //First get your Twitter info
-        IUserOptionsService userOption =
-            Sage.Platform.Application.ApplicationContext.Current.Services.Get<IUserOptionsService>();
-        string userName = userOption.GetCommonOption("UserName", "Twitter");
-        string passWord = userOption.GetCommonOption("Password", "Twitter");
+        //First get your Twitter info
 
         //Make sure we have all the info we need to send this direct message
-        if (!String.IsNullOrEmpty(userName) & !String.IsNullOrEmpty(passWord))
+        if (!String.IsNullOrEmpty(txtDirectMessage.Text))
         {
-            try
+
+            TwitterAPI api = GetAPI();
+            if (api != null)
             {
-                //Id to send message to
-                string id = "";
-
-                if (String.IsNullOrEmpty(txtTwitterId.Text))
-                    id = ddlTwitterIds.Text;
-                else
-                    id = txtTwitterId.Text.Trim();
-
-                //Create and send direct message
-                if (id != "")
+                try
                 {
-                    if (id != "noid")
+                    //Id to send message to
+                    string id = "";
+
+                    if (String.IsNullOrEmpty(txtTwitterId.Text))
+                        id = ddlTwitterIds.Text;
+                    else
+                        id = txtTwitterId.Text.Trim();
+
+                    //Create and send direct message
+                    if (id != "")
                     {
-                        if (!String.IsNullOrEmpty(txtDirectMessage.Text))
+                        if (id != "noid")
                         {
-                            Twitterizer.Framework.Twitter t = new Twitterizer.Framework.Twitter(userName, passWord);
-                            t.DirectMessages.New(id, txtDirectMessage.Text);
-           
-                            if (chkRecordMsg.Checked)
+                            if (!String.IsNullOrEmpty(txtDirectMessage.Text))
                             {
-                                CreateHistory(id);
+
+                                api.SendDirectMessage(id, txtDirectMessage.Text);
+
+                                if (chkRecordMsg.Checked)
+                                {
+                                    CreateHistory(id);
+                                }
+                            }
+                            else
+                            {
+                                throw new ValidationException("A message is required");
                             }
                         }
                         else
                         {
-                            throw new Sage.Platform.Application.ValidationException("A message is required");
-                        } 
+                            throw new ValidationException("A Twitter Id is required");
+                        }
                     }
                     else
                     {
-                        throw new Sage.Platform.Application.ValidationException("A Twitter Id is required");
+                        throw new ValidationException("A Twitter Id is required");
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    throw new Sage.Platform.Application.ValidationException("A Twitter Id is required");
+                    throw new ValidationException(ex.Message + "Error");
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Sage.Platform.Application.ValidationException(ex.Message);
             }
         }
         else
         {
-            throw new Sage.Platform.Application.ValidationException("Please goto user options and set your Twitter username and password");
+            throw new ValidationException("Please goto user options and set your Twitter username and password");
         }
     }
 
@@ -148,11 +163,11 @@ public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.Use
         if (currContact != null)
         {
             //Get logged in user
-            Sage.Platform.Security.IUserService userService = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Security.IUserService>();
-            
+            Sage.Platform.Security.IUserService userService = ApplicationContext.Current.Services.Get<Sage.Platform.Security.IUserService>();
+
             //Create new history object
             Sage.Entity.Interfaces.IHistory newHistory = Sage.Platform.EntityFactory.Create<Sage.Entity.Interfaces.IHistory>();
-            
+
             newHistory.AccountId = currContact.Account.Id.ToString();
             newHistory.ContactId = currContact.Id.ToString();
             newHistory.Category = "Twitter Direct Msg";
@@ -160,7 +175,7 @@ public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.Use
             newHistory.Notes = txtDirectMessage.Text;
             newHistory.Type = Sage.Entity.Interfaces.HistoryType.atMessageBox;
             newHistory.UserId = userService.UserId;
-            newHistory.Save(); 
+            newHistory.Save();
         }
     }
 
@@ -221,14 +236,14 @@ public partial class SmartParts_TaskPane_CommonTasks_Twitter : System.Web.UI.Use
                         chkRecordMsg.Checked = false;
                         chkRecordMsg.Enabled = false;
                     }
-                    
-                    
+
+
                     break;
                 default:
                     break;
             }
         }
-        else 
+        else
         {
             ddlTwitterIds.Items.Add(new ListItem("No Twitter Id...", "noid"));
             ddlTwitterIds.Enabled = false;

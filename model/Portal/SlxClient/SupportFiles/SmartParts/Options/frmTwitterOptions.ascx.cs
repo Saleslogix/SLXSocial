@@ -4,26 +4,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Sage.Platform.Application.UI;
+using Sage.Platform.Application.Services;
+using Sage.Platform.Application;
 
 public partial class SmartParts_Options_frmTwitterOptions : System.Web.UI.UserControl, ISmartPartInfoProvider
 {
+
+    string consumerKey = "Qc3pf17VKEVyxP74UlshA";
+    string consumerSecret = "uBQlaMTzoN4YdMfbpel8GaMsLL4QSyKyuHNIDVDCLPQ";
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        Sage.Platform.Application.Services.IUserOptionsService userOption = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Application.Services.IUserOptionsService>();
-        string userName = userOption.GetCommonOption("UserName", "Twitter");
-        string passWord = userOption.GetCommonOption("Password", "Twitter");
+        IUserOptionsService userOption = ApplicationContext.Current.Services.Get<IUserOptionsService>();
+        
         string myTwitterId = userOption.GetCommonOption("MyTwitterId", "Twitter");
         string dashView = userOption.GetCommonOption("DashView", "Twitter");
-
-        if (!String.IsNullOrEmpty(userName))
-        {
-            txtUserName.Text = userName;
-        }
-
-        if (!String.IsNullOrEmpty(passWord))
-        {
-            lblPassword.Text = "Password set and hidden for security";
-        }
 
         if (!String.IsNullOrEmpty(myTwitterId))
         {
@@ -34,30 +29,75 @@ public partial class SmartParts_Options_frmTwitterOptions : System.Web.UI.UserCo
         {
             dlViews.Text = dashView;
         }
+
+        if (!String.IsNullOrEmpty(Request.QueryString["oauth_verifier"]))
+        {
+            GetAccessToken();
+        }
+
+        string authId = userOption.GetCommonOption("AccessToken", "Twitter");
+
+        if (!string.IsNullOrEmpty(authId))
+        {
+            btnRegister.Visible = false;
+            lblRegistered.Visible = true;
+        }
+        else
+        {
+            btnRegister.Visible = true;
+            lblRegistered.Visible = false;
+        }
+
+    }
+
+    private void GetAccessToken()
+    {
+        TwitterVB2.TwitterOAuth auth = new TwitterVB2.TwitterOAuth(consumerKey, consumerSecret);
+        auth.GetAccessToken(Request.QueryString["oauth_token"], Request.QueryString["oauth_verifier"]);
+
+        
+        IUserOptionsService userOption = ApplicationContext.Current.Services.Get<IUserOptionsService>();
+
+        userOption.SetCommonOption("AccessToken", "Twitter", auth.Token, true);
+        userOption.SetCommonOption("AccessTokenSecret", "Twitter", auth.TokenSecret, true);
+        userOption.SetCommonOption("ConsumerKey", "Twitter", consumerKey, true);
+        userOption.SetCommonOption("ConsumerSecret", "Twitter", consumerSecret, true);
     }
 
     protected void btnSave_Click(object sender, ImageClickEventArgs e)
     {
-        Sage.Platform.Application.Services.IUserOptionsService userOption = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Application.Services.IUserOptionsService>();
-        userOption.SetCommonOption("UserName", "Twitter", txtUserName.Text, true);
-        userOption.SetCommonOption("Password", "Twitter", txtPassword.Text, true);
+        SaveDetails();
+    }
+
+    protected void btnRegister_Click(object sender, EventArgs args)
+    {
+        SaveDetails();
+
+        TwitterVB2.TwitterOAuth auth = new TwitterVB2.TwitterOAuth(consumerKey, consumerSecret, Request.Url.AbsoluteUri);
+        Response.Redirect(auth.GetAuthorizationLink());
+
+    }
+
+    private void SaveDetails()
+    {
+        IUserOptionsService userOption = ApplicationContext.Current.Services.Get<IUserOptionsService>();
         userOption.SetCommonOption("MyTwitterId", "Twitter", txtMyTwitterId.Text, true);
         userOption.SetCommonOption("DashView", "Twitter", dlViews.Text, true);
     }
+
 
     #region ISmartPartInfoProvider Members
 
     public ISmartPartInfo GetSmartPartInfo(Type smartPartInfoType)
     {
         Sage.Platform.WebPortal.SmartParts.ToolsSmartPartInfo tinfo = new Sage.Platform.WebPortal.SmartParts.ToolsSmartPartInfo();
-        tinfo.Description = "Twitter Options"; // "Change Password";
-        tinfo.Title = "Twitter"; // "Change Password";
+        tinfo.Description = "Twitter Options"; 
+        tinfo.Title = "Twitter"; 
         foreach (Control c in this.LitRequest_RTools.Controls)
         {
             tinfo.RightTools.Add(c);
         }
-
-        //tinfo.ImagePath = Page.ResolveClientUrl("~/images/icons/Schdedule_To_Do_24x24.gif");
+        
         return tinfo;
     }
 

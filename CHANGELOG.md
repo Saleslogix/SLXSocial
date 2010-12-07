@@ -1,1 +1,2 @@
+12/7/2010 - mdykun - Project was updated to include all of the items required to support twitter with oAuth support. Changed the underlying library from Twitterizer to TwitterVB due to stability issues.
 7/30/2010 - mdykun - added inital project items to the repository

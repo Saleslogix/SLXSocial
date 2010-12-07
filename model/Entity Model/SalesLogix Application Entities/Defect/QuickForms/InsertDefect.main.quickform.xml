@@ -34,6 +34,48 @@ if (Request.QueryString[Sage.Platform.WebPortal.EntityPage.CONST_ENTITYIDQUERYST
       <PerformsUpdate>False</PerformsUpdate>
       <AppliedSecurity />
     </ActionDefinition>
+    <ActionDefinition>
+      <ResourceKey>1204f537-98cd-4afd-9b26-ad77309d1a9d</ResourceKey>
+      <RootActionName>CSharpSnippetAction</RootActionName>
+      <Action>
+        <CSharpCodeSnippet><![CDATA[if (AppContext.HasContext("NewEntityParameters"))
+{
+    
+    System.Collections.Generic.Dictionary<string, string> args = AppContext["NewEntityParameters"] as System.Collections.Generic.Dictionary<string, string>;
+    Sage.Entity.Interfaces.IDefect defect = BindingSource.Current as Sage.Entity.Interfaces.IDefect;
+    defect.DefectProblem.Notes = args["description"];
+
+    // Source of Twitter
+    defect.Source = "kDEMOA0000D8";
+
+    // Defect type of Feature
+    defect.DefectType = "kDEMOA0000D7";
+    
+    this.txtDescription.Text = args["description"];
+    defect.Subject = args["subject"];
+	
+	
+	// Build out the link
+	string link = args["source"];
+	
+	link = link.Replace("&lt;", "<");
+	link = link.Replace("&gt;", ">");
+	link = link.Replace("&quot;", "\"");
+	
+	int index = link.IndexOf("<a href=\"") + 9;
+	int lastIndex = link.IndexOf("\"", index);
+	link = link.Substring(index, lastIndex-9);
+	
+    defect.LinkUrl = link;
+	
+}]]></CSharpCodeSnippet>
+      </Action>
+      <IsDialogCloseAction>False</IsDialogCloseAction>
+      <RunOnEveryRePaint>False</RunOnEveryRePaint>
+      <DialogActionResult>NoResult</DialogActionResult>
+      <PerformsUpdate>False</PerformsUpdate>
+      <AppliedSecurity />
+    </ActionDefinition>
   </LoadActions>
   <QuickFormElements>
     <QuickFormElement>

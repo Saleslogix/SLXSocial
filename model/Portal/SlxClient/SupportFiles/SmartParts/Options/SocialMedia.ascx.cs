@@ -17,11 +17,9 @@ public partial class SmartParts_Options_SocialMedia : System.Web.UI.UserControl,
         if (! IsPostBack)
         {
             Sage.Platform.Application.Services.IUserOptionsService userOption = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Application.Services.IUserOptionsService>();
-            string userName = userOption.GetCommonOption("UserName", "Twitter");
-            string passWord = userOption.GetCommonOption("Password", "Twitter");
-            
-            txtTwitterId.Text = userName;
-            txtTwitterPassword.Attributes.Add("value", passWord);
+
+            string userName = string.Empty;
+            string passWord = string.Empty;
 
             userName = userOption.GetCommonOption("UserName", "LinkedIn");
             passWord = userOption.GetCommonOption("Password", "LinkedIn");
@@ -36,12 +34,7 @@ public partial class SmartParts_Options_SocialMedia : System.Web.UI.UserControl,
             txtFaceBookPassword.Attributes.Add("value", passWord);
         }
     }
-    protected void cmdTwitterSave_Click(object sender, EventArgs e)
-    {
-        Sage.Platform.Application.Services.IUserOptionsService userOption = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Application.Services.IUserOptionsService>();
-        userOption.SetCommonOption("UserName", "Twitter", txtTwitterId.Text, true);
-        userOption.SetCommonOption("Password", "Twitter", txtTwitterPassword.Text, true);
-    }
+
     protected void cmdLinkedInSave_Click(object sender, EventArgs e)
     {
         Sage.Platform.Application.Services.IUserOptionsService userOption = Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Application.Services.IUserOptionsService>();

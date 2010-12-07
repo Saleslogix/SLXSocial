@@ -1,3 +1,3 @@
-12/07/2010 - mdykun - rebasing new changes 4
+12/7/2010 - Mark Dykun - This Accelerator provides Twitter support to Sage SalesLogix 7.5.3 Client. It requires the Standard Problem/Resolution accelerator be installed first as it integrates with the Ticket Problem Type dialogs. The functionality augments several stock smartparts (Lead, Ticket, Defect, Ticket Problem Type) as well as the Link Handler (C# and Javascript) files. Make sure that you back the ones you have up and determine the change sets to migrate across. oAuth support is added in this release and before the user can post to twitter they will need to go to options tab and register the application with Twitter. 
 
-Initial release of code that provides some twitter integration. The project dependon the SLXQandAweb customization bundle also being applied at this time. The Twitter dll may have to be mapped to ensure that the customizations are compiled correctly in Application Architect.
+Apply the SocialFields SXB to add a new field to the Contact Table (TwitterId)

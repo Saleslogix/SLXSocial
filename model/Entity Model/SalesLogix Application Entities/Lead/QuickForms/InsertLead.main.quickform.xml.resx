@@ -117,10 +117,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Title" xml:space="preserve">
+  <data name="nmeLeadName.Caption" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="chkAutoSearch.Caption" xml:space="preserve">
+    <value>Automatically search after Phone is filled in</value>
+  </data>
+  <data name="cmdMatchingRecords.Caption" xml:space="preserve">
+    <value>Look for Matching Records</value>
+  </data>
+  <data name="txtCompany.Caption" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="adrAddress.Caption" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="urlWebAddress.Caption" xml:space="preserve">
+    <value>Web:</value>
+  </data>
+  <data name="emlEmail.Caption" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="phnWorkPhone.Caption" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="pklTitle.Caption" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="phnTollFree.Caption" xml:space="preserve">
+    <value>Toll Free:</value>
+  </data>
+  <data name="txtBusinessDescription.Caption" xml:space="preserve">
+    <value>Business Description:</value>
+  </data>
+  <data name="txtInterests.Caption" xml:space="preserve">
+    <value>Interested In:</value>
+  </data>
+  <data name="pklIndustry.Caption" xml:space="preserve">
+    <value>Industry:</value>
+  </data>
+  <data name="txtSICCode.Caption" xml:space="preserve">
+    <value>SIC Code:</value>
+  </data>
+  <data name="txtComments.Caption" xml:space="preserve">
+    <value>Comments:</value>
+  </data>
+  <data name="lueLeadSource.Caption" xml:space="preserve">
+    <value>Lead Source:</value>
+  </data>
+  <data name="lueLeadSource.LookupProperties.Type.PropertyHeader" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lueLeadSource.LookupProperties.AbbrevDescription.PropertyHeader" xml:space="preserve">
+    <value>Source Code</value>
+  </data>
+  <data name="lueLeadSource.LookupProperties.Description.PropertyHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lueLeadSource.LookupProperties..PropertyHeader" xml:space="preserve">
     <value />
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Insert New Ticket</value>
+  <data name="lueLeadSource.LookupProperties.SourceDate.PropertyHeader" xml:space="preserve">
+    <value>Source Date</value>
+  </data>
+  <data name="ownOwner.Caption" xml:space="preserve">
+    <value>Owner:</value>
+  </data>
+  <data name="cmdSave.Caption" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cmdSaveNew.Caption" xml:space="preserve">
+    <value>Save &amp; New</value>
+  </data>
+  <data name="cmdSave.ToolTip" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cmdSaveNew.ToolTip" xml:space="preserve">
+    <value>Save &amp; New</value>
+  </data>
+  <data name="cmdMatchingRecords.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="88210646-7333-4492-b080-6227e297ba66.DialogTitleOverride" xml:space="preserve">
+    <value>Search For Duplicates</value>
+  </data>
+  <data name="phnWorkPhone.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="emlEmail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lueLeadSource.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ownOwner.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="urlWebAddress.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lueLeadSource.LUPF.Status" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="emlEmail.ButtonToolTip" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="lueLeadSource.ButtonToolTip" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="ownOwner.ButtonToolTip" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="adrAddress.AddressToolTip" xml:space="preserve">
+    <value>MapQuest</value>
+  </data>
+  <data name="adrAddress.ButtonToolTip" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="urlWebAddress.ButtonToolTip" xml:space="preserve">
+    <value>WWW</value>
+  </data>
+  <data name="nmeLeadName.ButtonToolTip" xml:space="preserve">
+    <value>Edit</value>
   </data>
 </root>
