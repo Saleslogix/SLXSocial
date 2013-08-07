@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <PortalPage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="fc228137-bcc8-43c6-8c62-84b2332e7018">
   <PageAlias>SocialNet</PageAlias>
+  <SmallImage>[Localization!Global_Images:Groups_16x16]</SmallImage>
   <LargeImage>[Localization!Global_Images:Groups_32x32]</LargeImage>
   <TemplateUrl>Masters\base.master</TemplateUrl>
   <InheritTemplate>false</InheritTemplate>
@@ -15,4 +16,5 @@
     <guid>fe19d709-77d0-4fe9-8908-f42d0473f6bb</guid>
   </ExcludedGlobalModules>
   <AppliedSecurity />
+  <IncludeScript />
 </PortalPage>

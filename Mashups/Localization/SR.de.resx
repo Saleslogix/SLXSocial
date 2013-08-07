@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AggregationType_Average_DisplayName" xml:space="preserve">
+    <value>Durchschnitt</value>
+  </data>
+  <data name="SelectProperty_Expand_DisplayName" xml:space="preserve">
+    <value>Einblenden</value>
+  </data>
+  <data name="Sort_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="Aggregation_Alias_DisplayName" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="FilterProcessor_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="SqlProcessor_Query_DisplayName" xml:space="preserve">
+    <value>Abfrage</value>
+  </data>
+  <data name="FeedProcessor_DisplayName" xml:space="preserve">
+    <value>Feed</value>
+  </data>
+  <data name="AggregateProcessor_DisplayName" xml:space="preserve">
+    <value>Aggregat</value>
+  </data>
+  <data name="TimelineSelectProcessor_Thumbnail_DisplayName" xml:space="preserve">
+    <value>Miniaturansicht</value>
+  </data>
+  <data name="SDataProcessor_Password_DisplayName" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="Parameter_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SoapProcessor_DisplayName" xml:space="preserve">
+    <value>SOAP</value>
+  </data>
+  <data name="MashupProcessor_ResultName_DisplayName" xml:space="preserve">
+    <value>Ergebnisname</value>
+  </data>
+  <data name="SqlProcessor_DisplayName" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="TimelineSelectProcessor_Title_DisplayName" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="FeedType_Rss_DisplayName" xml:space="preserve">
+    <value>RSS</value>
+  </data>
+  <data name="AggregateProcessor_Groups_DisplayName" xml:space="preserve">
+    <value>Gruppen</value>
+  </data>
+  <data name="SnippetProcessor_MethodName_DisplayName" xml:space="preserve">
+    <value>Methodenname</value>
+  </data>
+  <data name="SDataProcessor_BaseUrl_DisplayName" xml:space="preserve">
+    <value>Basis-URL</value>
+  </data>
+  <data name="SelectType_Append_DisplayName" xml:space="preserve">
+    <value>Anhängen</value>
+  </data>
+  <data name="QueryProcessor_Query_DisplayName" xml:space="preserve">
+    <value>Abfrage</value>
+  </data>
+  <data name="SoapProcessor_ServiceName_DisplayName" xml:space="preserve">
+    <value>Dienstname</value>
+  </data>
+  <data name="FeedProcessor_Type_DisplayName" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Join_InputName_DisplayName" xml:space="preserve">
+    <value>Eingabename</value>
+  </data>
+  <data name="FeedProcessor_Uri_DisplayName" xml:space="preserve">
+    <value>URI</value>
+  </data>
+  <data name="JoinProcessor_Joins_DisplayName" xml:space="preserve">
+    <value>Joins</value>
+  </data>
+  <data name="SelectType_Replace_DisplayName" xml:space="preserve">
+    <value>Ersetzen</value>
+  </data>
+  <data name="AggregationType_Maximum_DisplayName" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="InputProcessorBase_Parameters_DisplayName" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="TimelineSelectProcessor_Link_DisplayName" xml:space="preserve">
+    <value>Verknüpfung</value>
+  </data>
+  <data name="ProcessorBase_ContinueOnError_DisplayName" xml:space="preserve">
+    <value>Bei Fehler fortsetzen</value>
+  </data>
+  <data name="Mashup_DisplayName" xml:space="preserve">
+    <value>Mashup</value>
+  </data>
+  <data name="ProcessorBase_Width_DisplayName" xml:space="preserve">
+    <value>Breite</value>
+  </data>
+  <data name="TimelineSelectProcessor_Start_DisplayName" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="SDataProcessor_DisplayName" xml:space="preserve">
+    <value>SData</value>
+  </data>
+  <data name="TimelineSelectProcessor_EarliestEnd_DisplayName" xml:space="preserve">
+    <value>Frühestes Ende</value>
+  </data>
+  <data name="TimelineSelectProcessor_Description_DisplayName" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="JoinType_Outer_DisplayName" xml:space="preserve">
+    <value>Outer</value>
+  </data>
+  <data name="FeedProcessor_Password_DisplayName" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="AggregateProcessor_Aggregations_DisplayName" xml:space="preserve">
+    <value>Aggregationen</value>
+  </data>
+  <data name="SortProcessor_Sorts_DisplayName" xml:space="preserve">
+    <value>Sortierungen</value>
+  </data>
+  <data name="SelectProcessor_Properties_DisplayName" xml:space="preserve">
+    <value>Eigenschaften</value>
+  </data>
+  <data name="TimelineSelectProcessor_Color_DisplayName" xml:space="preserve">
+    <value>Farbe</value>
+  </data>
+  <data name="SDataProcessor_EndPoint_DisplayName" xml:space="preserve">
+    <value>Endpunkt</value>
+  </data>
+  <data name="TimelineSelectProcessor_End_DisplayName" xml:space="preserve">
+    <value>Ende</value>
+  </data>
+  <data name="QueryProcessor_MaximumResults_DisplayName" xml:space="preserve">
+    <value>Maximale Ergebnisse</value>
+  </data>
+  <data name="ProcessorBase_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FilterProcessor_DisplayName" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="ProcessorBase_Location_DisplayName" xml:space="preserve">
+    <value>Standort</value>
+  </data>
+  <data name="QueryProcessor_DisplayName" xml:space="preserve">
+    <value>HQL</value>
+  </data>
+  <data name="Category_Design" xml:space="preserve">
+    <value>Entwurf</value>
+  </data>
+  <data name="FeedType_Auto_DisplayName" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="MashupProcessor_DisplayName" xml:space="preserve">
+    <value>Mashup</value>
+  </data>
+  <data name="SqlProcessor_ConnectionString_DisplayName" xml:space="preserve">
+    <value>Verbindungszeichenfolge</value>
+  </data>
+  <data name="FeedProcessor_UserName_DisplayName" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="Mashup_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MashupProcessor_MashupName_DisplayName" xml:space="preserve">
+    <value>Mashup-Name</value>
+  </data>
+  <data name="SoapProcessor_MethodName_DisplayName" xml:space="preserve">
+    <value>Methodenname</value>
+  </data>
+  <data name="Mashup_Parameters_DisplayName" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="SortProcessor_DisplayName" xml:space="preserve">
+    <value>Sortieren</value>
+  </data>
+  <data name="Sort_Ascending_DisplayName" xml:space="preserve">
+    <value>Aufsteigend</value>
+  </data>
+  <data name="TimelineSelectProcessor_TimelineSelect_DisplayName" xml:space="preserve">
+    <value>Zeitplanerauswahl</value>
+  </data>
+  <data name="Property_Alias_DisplayName" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="TimelineSelectProcessor_TextColor_DisplayName" xml:space="preserve">
+    <value>Textfarbe</value>
+  </data>
+  <data name="Join_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="SnippetProcessor_DisplayName" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="AggregationType_Sum_DisplayName" xml:space="preserve">
+    <value>Summe</value>
+  </data>
+  <data name="FeedType_Opml_DisplayName" xml:space="preserve">
+    <value>OPML</value>
+  </data>
+  <data name="SoapProcessor_Wsdl_DisplayName" xml:space="preserve">
+    <value>WSDL</value>
+  </data>
+  <data name="Parameter_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="SelectProcessor_Type_DisplayName" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="TimelineSelectProcessor_IsDuration_DisplayName" xml:space="preserve">
+    <value>Ist Dauer</value>
+  </data>
+  <data name="TimelineSelectProcessor_Icon_DisplayName" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="JoinProcessor_DisplayName" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="AggregationType_Minimum_DisplayName" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="AggregationType_Count_DisplayName" xml:space="preserve">
+    <value>Anzahl</value>
+  </data>
+  <data name="TimelineSelectProcessor_Image_DisplayName" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="JoinType_Inner_DisplayName" xml:space="preserve">
+    <value>Inner</value>
+  </data>
+  <data name="Property_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="JoinProcessor_Type_DisplayName" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="SelectProcessor_DisplayName" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
+  <data name="FeedType_Atom_DisplayName" xml:space="preserve">
+    <value>Atom</value>
+  </data>
+  <data name="Aggregation_Type_DisplayName" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Aggregation_Expression_DisplayName" xml:space="preserve">
+    <value>Ausdruck</value>
+  </data>
+  <data name="ProcessorBase_Expanded_DisplayName" xml:space="preserve">
+    <value>Erweitert</value>
+  </data>
+  <data name="TimelineSelectProcessor_LatestStart_DisplayName" xml:space="preserve">
+    <value>Spätester Start</value>
+  </data>
+  <data name="SDataProcessor_UserName_DisplayName" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+</root>

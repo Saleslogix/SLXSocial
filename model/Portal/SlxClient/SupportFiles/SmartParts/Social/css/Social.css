@@ -1,0 +1,141 @@
+﻿.ext-ie TD input.x-form-combo
+{
+	top: 1px;
+}
+.social-menu h3
+{
+	margin: 0;
+	background: #999999; /*#1C4187*/;
+	color: #ffffff;
+	padding: 3px;
+	border: solid 1px #ffffff;
+	border-style: inset;
+}
+.social-list .x-grid3-row *
+{
+    line-height: 2em;
+    font-size: 1.0em;
+}
+.social-list .x-grid3-col-0
+{
+	text-align: left;
+}
+.social-list .x-grid3-col-0 img
+{
+	width: 48px;
+	height: 48px;
+}
+.social-list .x-grid3-col-0 a
+{
+	text-decoration: none;
+}
+.social-list .x-grid3-col-0 span
+{
+    margin: 0 0 0 .5em;
+}
+.social-list .x-grid3-hd-id
+{
+    text-align: center;
+    font-size:1.2em;
+}
+.social-list .x-grid3-hd-1 
+{
+    font-size: 1.2em;
+}
+.social-panel .s-row
+{
+    padding: 8px 8px;	
+    border-bottom: dashed 1px #cccccc;
+}
+.social-panel .s-row:hover
+{
+	background: #f9f9f9;
+}
+.social-panel .s-row-last
+{	
+    border-bottom: none 0px #cccccc;
+}
+.social-panel .s-row p
+{
+	margin: 0 0 4px 56px;
+}
+.social-panel .s-row img
+{
+	width: 48px;
+	height: 48px;
+	float: left;
+}
+.social-panel .s-row .s-info
+{
+	margin: 0 0 0 56px;
+	font-style: italic;
+	color: #999999;	
+}
+.social-panel .s-row .s-clear
+{
+	clear: both;
+}
+.social-panel .s-tool-config
+{
+	background: url('images/icons/options_16x16.gif') no-repeat;
+}
+.s-user 
+{
+    font-style: italic;
+    color: #999999;
+    font-size: 9pt;
+}
+.social-profile
+{
+    width: 600px;
+}
+.social-profile .s-profile-picture 
+{
+    float: left;
+    margin: 4px;
+}
+.social-profile .s-summary 
+{
+    display: inline-block;
+}
+.social-profile .s-title 
+{
+    font-size: 14pt;
+    font-weight: bold;
+}
+.social-profile .s-headline 
+{
+    font-size: 12pt;
+}
+.social-profile .s-subtitle
+{
+    color: #999999;
+}
+.social-profile .s-subtitle span:not(:first-child)
+{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #777777;
+}
+.social-profile label 
+{
+    font-size: 9pt;
+    color: #999999;
+}
+.social-profile .s-description 
+{
+    clear: both;
+    margin-top: 5px;
+}
+.social-profile .s-profile-link 
+{
+    text-align: right;
+    padding: 3px 10px 2px 0;
+    clear: both;
+}
+.social-profile .s-profile-link img 
+{
+    border: 0;
+    width: 16px;
+    height: 16px;
+}

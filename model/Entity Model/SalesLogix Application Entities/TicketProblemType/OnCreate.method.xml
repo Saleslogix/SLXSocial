@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="7c8f65f2-0087-48e2-929a-438dc72bef81" lastModifiedUtc="2013-04-14T18:38:04.8529247Z" name="OnCreate" methodType="CrudEvent" actionType="None" returnMode="None">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="d50b2eab-7b04-4412-8ab4-d2ff941bc665" lastModifiedUtc="2013-04-14T18:53:29.0924759Z" targetType="Sage.BusinessRules.CodeSnippets.TicketProblemTypeBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="SLXSocial_OnCreate" active="true" description="Set defaults passed from the social queue context menu" codeSnippetId="21fab20d-95df-4c80-b9b4-3845f9bf7c11">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

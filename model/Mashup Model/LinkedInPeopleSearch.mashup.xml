@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<mashup id="64e9da26-c30d-4599-97a9-019ffa5e7919" name="LinkedInPeopleSearch">
+  <processors>
+    <processor type="UKPSG.Social.Mashups.Processors.LinkedinProcessor, UKPSG.Social.Mashups">
+      <queryProcessor id="0448b88a-17ec-48d4-8454-a5899eb0d7d5" name="AllResults" location="360, 60" expanded="true" continueOnError="false">
+        <parameters>
+          <parameter id="fb461051-6a62-4b8b-bbb4-30c80fa332bd" name="LinkedInUser" expression="'{MemberId}'" />
+        </parameters>
+        <QueryType>People</QueryType>
+      </queryProcessor>
+    </processor>
+  </processors>
+  <parameters />
+  <links />
+</mashup>

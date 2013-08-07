@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="378fd86f-840d-4708-90b1-7802c7c93904" lastModifiedUtc="2013-04-14T15:12:00.9627617Z" name="OnCreate" methodType="CrudEvent" actionType="None" returnMode="None">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget id="730226b0-42da-49f0-b8d4-b2d6720b4b3e" lastModifiedUtc="0001-01-01T00:00:00" targetType="Sage.SalesLogix.Lead.Rules, Sage.SalesLogix.BusinessRules" targetMethod="OnCreate" active="true">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTarget" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="a5c6c12e-0c9a-4870-a40d-838bfc5c497f" lastModifiedUtc="2013-04-16T16:11:04.2605349Z" targetType="Sage.BusinessRules.CodeSnippets.LeadBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="SLXSocial_OnLeadCreate" active="true" description="Set defaults for the lead passed from the Social Queue context menu action" codeSnippetId="da57c1d9-c489-4bd0-9ce8-a057b8b601f1">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </postExecuteTargets>
+  <postFlushTargets />
+</method>

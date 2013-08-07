@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<mashup id="ef8b4841-f231-4efc-b074-4b3b8902d842" name="TwitterStatusByUser">
+  <processors>
+    <processor type="UKPSG.Social.Mashups.Processors.TwitterProcessor, UKPSG.Social.Mashups">
+      <queryProcessor id="feac6744-1dae-4f49-9d93-18e7b9edccb8" name="Get Status Feed" location="20, 20" expanded="true" width="440" continueOnError="false" query="from status in Status&#xD;&#xA;where status.Type == StatusType.User &amp;&amp; &#xD;&#xA;status.ScreenName == &quot;:ScreenName&quot; &amp;&amp;&#xD;&#xA;status.Count == 100&#xD;&#xA;select status.User" OAuthConsumerKey="uA19IJohwEqgKIJsMl663g" OAuthConsumerSecret="HXgTvN0tCpubci7cvIDQaqRjTMNUWnEgGuyl3XwKQLg" OAuthToken="250248764-rocsSOaLQmjEdfEJT3ZLoi24FqeGHGISJWQsfGoS" OAuthTokenSecret="kOq9pWhaQ53Z2CudwcI1QqU0yTPCzLwfg3qaIjTs" maximumResults="100">
+        <parameters>
+          <parameter id="9fe1723f-c0b2-4f3a-b7e0-1cada901f922" name="ScreenName" expression="ScreenName" />
+        </parameters>
+      </queryProcessor>
+    </processor>
+    <processor type="Sage.Platform.Mashups.Processors.SelectProcessor, Sage.Platform.Mashups">
+      <selectProcessor id="fd2f976a-6539-4b78-82d4-3efcbeb2181f" name="Select Important Fields" location="520, 40" expanded="true" continueOnError="false">
+        <properties>
+          <property id="f5d9d85c-595b-459e-a602-051027ea7571" expression="StatusID" />
+          <property id="29f2124f-035f-4501-ac4d-7847281c19bf" expression="CreatedAt" />
+          <property id="3f3b2b8e-9b52-43f0-8246-70e012e5ab45" expression="Name" />
+          <property id="7b5ebd52-dafa-4b36-acc4-f984cdb38223" expression="Location" />
+          <property id="83258d79-d9b0-4507-a125-389094f37218" expression="Text" />
+          <property id="bf6d22ea-d7de-46c0-94a0-f28a7e38faab" expression="RetweetCount" />
+        </properties>
+      </selectProcessor>
+    </processor>
+  </processors>
+  <parameters>
+    <parameter id="76451932-9c95-4b0f-9519-75a707b95c01" name="ScreenName" expression="'SageSalesLogix'" />
+  </parameters>
+  <links>
+    <link source="Get Status Feed" target="Select Important Fields" />
+  </links>
+</mashup>

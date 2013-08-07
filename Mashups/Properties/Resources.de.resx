@@ -112,15 +112,117 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Title" xml:space="preserve">
-    <value />
+  <data name="FeedProcessor_UriNotWellFormed" xml:space="preserve">
+    <value>URI '{0}' ist fehlerhaft</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value />
+  <data name="JoinProcessor_JoinSingular" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="SelectProcessor_PropertySingular" xml:space="preserve">
+    <value>Eigenschaft</value>
+  </data>
+  <data name="FeedProcessor_UnexpectedFeedContent" xml:space="preserve">
+    <value>Unerwartete Feedinhalte:</value>
+  </data>
+  <data name="JoinProcessor_InputNotFound" xml:space="preserve">
+    <value>Eingabe '{0}' wurde nicht gefunden</value>
+  </data>
+  <data name="MashupProcessor_ProcessorNotAddedToMashup" xml:space="preserve">
+    <value>Verarbeitungssteuerelement wurde nicht zu einem Mashup hinzugefügt</value>
+  </data>
+  <data name="MashupProcessor_ParentMashupNotAddedToContainer" xml:space="preserve">
+    <value>Übergeordnetes Mashup wurde nicht zu einem Mashup-Container hinzugefügt</value>
+  </data>
+  <data name="AggregateProcessor_GroupSingular" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="JoinProcessor_InvalidTypeSpecified" xml:space="preserve">
+    <value>Der angegebene Typ ist ungültig</value>
+  </data>
+  <data name="SDataProcessor_UnexpectedResponseContentType" xml:space="preserve">
+    <value>Unerwarteter Inhaltstyp bei Antwort: {0}</value>
+  </data>
+  <data name="SDataProcessor_BaseUrlCannotBeParsed" xml:space="preserve">
+    <value>Basis-URL '{0}' kann nicht analysiert werden</value>
+  </data>
+  <data name="SDataProcessor_UnableToParseEndPoint" xml:space="preserve">
+    <value>Endpunkt kann nicht analysiert werden: {0}</value>
+  </data>
+  <data name="SoapProcessor_UnableToExecuteSoap" xml:space="preserve">
+    <value>SOAP kann nicht ausgeführt werden:</value>
+  </data>
+  <data name="Sort_Descending_Abbreviation" xml:space="preserve">
+    <value>Abst.</value>
+  </data>
+  <data name="MashupProcessor_ResultNotFound" xml:space="preserve">
+    <value>Ergebnis '{0}' wurde nicht gefunden</value>
+  </data>
+  <data name="Aggregation_InvalidTypeSpecified" xml:space="preserve">
+    <value>Der angegebene Typ ist ungültig</value>
+  </data>
+  <data name="SDataProcessor_EndPointCannotBeParsed" xml:space="preserve">
+    <value>Endpunkt '{0}' kann nicht analysiert werden</value>
+  </data>
+  <data name="ProcessorBase_UnableToValidateProcessor" xml:space="preserve">
+    <value>Prozessor '{0}' kann nicht überprüft werden:</value>
+  </data>
+  <data name="SelectProcessor_InvalidTypeSpecified" xml:space="preserve">
+    <value>Der angegebene Typ ist ungültig</value>
+  </data>
+  <data name="InputProcessorBase_ParameterSingular" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="SoapProcessor_WsdlNotWellFormed" xml:space="preserve">
+    <value>WSDL '{0}' ist fehlerhaft</value>
+  </data>
+  <data name="JoinProcessor_JoinNotFound" xml:space="preserve">
+    <value>Join '{0}' wurde nicht gefunden</value>
+  </data>
+  <data name="DefaultQueryExecutor_UnableToExecuteQuery" xml:space="preserve">
+    <value>Abfrage kann nicht ausgeführt werden:</value>
+  </data>
+  <data name="SortProcessor_SortSingular" xml:space="preserve">
+    <value>Sortieren</value>
+  </data>
+  <data name="Sort_Ascending_Abbreviation" xml:space="preserve">
+    <value>Aufst.</value>
+  </data>
+  <data name="Mashup_NameContainsInvalidCharacters" xml:space="preserve">
+    <value>Name '{0}' enthält ungültige Zeichen</value>
+  </data>
+  <data name="SDataProcessor_UnableToBuildRequestUri" xml:space="preserve">
+    <value>Anforderungs-URI kann nicht erstellt werden</value>
+  </data>
+  <data name="SDataProcessor_UnableToParseBaseUrl" xml:space="preserve">
+    <value>Basis-URL kann nicht analysiert werden: {0}</value>
+  </data>
+  <data name="FeedProcessor_InvalidTypeSpecified" xml:space="preserve">
+    <value>Der angegebene Typ ist ungültig</value>
+  </data>
+  <data name="Mashup_NameAlreadyExists" xml:space="preserve">
+    <value>Name '{0}’ ist bereits vorhanden.</value>
+  </data>
+  <data name="MashupProcessor_MashupNotFound" xml:space="preserve">
+    <value>Mashup '{0}' wurde nicht gefunden</value>
+  </data>
+  <data name="AggregateProcessor_AggregationSingular" xml:space="preserve">
+    <value>Aggregation</value>
+  </data>
+  <data name="MashupModel_NewMashupName" xml:space="preserve">
+    <value>Neues Mashup {0}</value>
+  </data>
+  <data name="PropertyCannotBeEmpty" xml:space="preserve">
+    <value>{0} darf nicht leer sein.</value>
+  </data>
+  <data name="Mashup_ParameterSingular" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="SqlProcessor_InvalidQuery" xml:space="preserve">
+    <value>Abfrage darf nicht mit INSERT, UPDATE oder DELETE beginnen</value>
   </data>
 </root>

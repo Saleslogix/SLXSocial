@@ -14,7 +14,14 @@ public partial class SmartParts_Social_WebUserControl : System.Web.UI.UserContro
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        ScriptManager.RegisterClientScriptInclude(this, GetType(), "sociallist", Page.ResolveClientUrl("~/jscript/sage-socialpanel.js"));
-
+        ScriptManager.RegisterStartupScript(this, GetType(), "SocialQueueApp", String.Format(@"
+require({{ packages: [ {{ name: 'SLXSocial', location: '../../../SmartParts/Social/js' }} ] }}, 
+    ['SLXSocial/SocialQueue/App'], 
+    function(App) {{
+        var app = new App(document.getElementById('{0}'));
+        app.startAll();
+    }}
+);
+", content.ClientID) , true);
     }
 }

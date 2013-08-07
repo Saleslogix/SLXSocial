@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<Tasklet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="4a964747-5d9e-4a12-bef1-f67dae9c0a54">
-  <SmartPart>SmartParts\TaskPane\CommonTasks\Twitter.ascx</SmartPart>
-  <EntityNames />
-  <UseCustomRendering>false</UseCustomRendering>
-</Tasklet>

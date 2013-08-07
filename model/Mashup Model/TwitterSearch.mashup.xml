@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<mashup id="715a8dba-e266-4eab-a039-9d205c38c00a" name="TwitterSearch">
+  <processors>
+    <processor type="UKPSG.Social.Mashups.Processors.TwitterProcessor, UKPSG.Social.Mashups">
+      <queryProcessor id="804479af-03fc-4bbc-8a77-01886c88c5c3" name="TwitterSearch" location="60, 20" expanded="true" width="400" continueOnError="false" query="from search in Search&#xD;&#xA;where search.Type == SearchType.Search  &amp;&amp;&#xD;&#xA;search.Query == &quot;:Search&quot; &amp;&amp;&#xD;&#xA;search.Count == 100&#xD;&#xA;select search" maximumResults="100">
+        <parameters>
+          <parameter id="bd49bab8-4d8a-44ed-80b7-7678ce1b04ae" name="Search" expression="Search" />
+        </parameters>
+      </queryProcessor>
+    </processor>
+    <processor type="UKPSG.Social.Mashups.Processors.TwitterProcessor, UKPSG.Social.Mashups">
+      <queryProcessor id="bffc75ef-fd0c-4d17-8401-775c579c476e" name="TwitterUserFeed" location="700, 20" expanded="true" continueOnError="false" query="from status in Status&#xD;&#xA;where status.Type == StatusType.User &amp;&amp; &#xD;&#xA;status.ScreenName == &quot;:TwitterUser&quot; &amp;&amp;&#xD;&#xA;status.Count == 100&#xD;&#xA;select status" maximumResults="100">
+        <parameters>
+          <parameter id="5e74b643-c942-421e-88b7-6ff63addfc7b" name="TwitterUser" expression="TwitterUser" />
+        </parameters>
+      </queryProcessor>
+    </processor>
+    <processor type="Sage.Platform.Mashups.Processors.SelectProcessor, Sage.Platform.Mashups">
+      <selectProcessor id="1713d57d-5268-436d-8893-211796b901ee" name="AllResults" location="280, 280" expanded="true" width="480" continueOnError="false">
+        <properties>
+          <property id="1071150d-09aa-4fc2-a154-a941794a37b9" expression="StatusID" alias="StatusID" />
+          <property id="7f0d37df-56ef-4d74-8b02-97e0267a4a9b" expression="Text" alias="Text" />
+          <property id="5c5343fe-3580-4c5f-991f-e70f42f90636" expression="User.ScreenName" alias="ScreenName" />
+          <property id="8551d444-2eff-4ce1-9777-ba04950a4d88" expression="User.UserID" alias="UserID" />
+          <property id="2f7facfe-98e5-4b83-84ff-646a33f7b028" expression="CreatedAt" alias="CreatedAt" />
+          <property id="40393722-4b63-4b4e-bc81-fb9f494b42fc" expression="User.Description" alias="UserDescription" />
+          <property id="e2455f4c-b83a-4468-8b6d-207d572ee030" expression="User" alias="User" />
+          <property id="2fd5b78a-d4af-41cf-b7ee-e5eb35cb80c6" expression="User.ProfileImageUrlHttps" alias="ProfileImageUrlHttps" />
+          <property id="8b2eb794-9bc5-4c60-b491-2ce0e348e767" expression="User.ProfileImageUrlHttps" alias="ProfileImageUrl" />
+          <property id="4da2221c-c51f-4f51-8ae0-cb1fc59bf0ee" expression="Icon" alias="Icon" />
+          <property id="5d55d1ff-9b6a-4106-af01-d35be56046f8" expression="StatusUrl" alias="StatusUrl" />
+          <property id="90fb98fc-29fb-448e-8a9f-29773cfe475f" expression="User.ProfileUrl" alias="ProfileUrl" />
+        </properties>
+      </selectProcessor>
+    </processor>
+  </processors>
+  <parameters />
+  <links>
+    <link source="TwitterUserFeed" target="AllResults" />
+    <link source="TwitterSearch" target="AllResults" />
+  </links>
+</mashup>

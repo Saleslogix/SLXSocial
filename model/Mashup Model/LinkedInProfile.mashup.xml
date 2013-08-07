@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<mashup id="60d46c0a-90a9-4736-ab50-0ee32018c3b8" name="LinkedInProfile">
+  <processors>
+    <processor type="UKPSG.Social.Mashups.Processors.LinkedinProcessor, UKPSG.Social.Mashups">
+      <queryProcessor id="1b01474e-519a-4c8f-b1f2-0f06f2b9cf4c" name="AllResults" location="180, 80" expanded="true" continueOnError="false">
+        <parameters />
+        <QueryType>Profile</QueryType>
+      </queryProcessor>
+    </processor>
+  </processors>
+  <parameters />
+  <links />
+</mashup>
