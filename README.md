@@ -1,35 +1,44 @@
-8/9/2013 - Nicolas Galler - Added 3 new tabs: Social Updates, Social Profile, Social Timeline, and 1 navigation item: Social Queue.
+# Installation
 
-# Social Network Configuration
+## SalesLogix Bundle
+
+There are 2 bundles: _SalesLogix OAuth Integration_ has the OAuth changes and _Social Profile_ has the new social tabs.
+They both contain schema changes.  Prior to installing the social profile bundle, the Mashup Provider DLL 
+_UKPSG.Social.Mashups.dll_ must be registered with Application Architect by copying
+it to C:\Program Files (x86)\SalesLogix\Platform.  The DLL can be found inside of the Social Profile bundle.
+
+## Social Network Configuration
 
 Twitter and LinkedIn are both supported but must be configured under Administration -> Authentication Providers, then the users 
 need to authorize the service under Tools -> Options.
 
 For Twitter, the provider must be named "Twitter OAuth", and the parameters are as follows:
-Provider URL = https://api.twitter.com
-OAuth Version = 1.0
-Request URL suffix: /oauth/request_token
-Request token method: POST
-Supports Callback: true
-Secret: consumer secret obtained when registering Twitter application
-Client ID: client id obtained when registering Twitter application
-Host URL: https://api.twitter.com
-Approval URL Suffix: /oauth/authenticate
-Requires access token: true
-Access Url Suffix: /oauth/access_token
 
-For LinkedIn, the provider must be named "LinkedIn", and configured as follows:
-Provider URL = https://www.linkedin.com/uas/oauth2
-OAuth Version = 2.0
-Supports Callback = true
-Secret = consumer secret obtained when registering LinkedIn application
-Client Id = client id obtained when registering LinkedIn application
-Host Url = https://www.linkedin.com/uas/oauth2
-Approval Url Suffix = /authorization
-User Data String = ?response_type=code&client_id={CLIENTID}&state={STATE}&redirect_uri={REDIRECT_URI}
-Requires access token: true
-Access Url Suffix = /accessToken
-Access Data String = grant_type=authorization_code&code={TOKEN}&redirect_uri={REDIRECT_URI}&client_id={CLIENTID}&client_secret={CLIENTSECRET}
+Provider URL = https://api.twitter.com  
+OAuth Version = 1.0  
+Request URL suffix: /oauth/request_token  
+Request token method: POST  
+Supports Callback: true  
+Secret: consumer secret obtained when registering Twitter application  
+Client ID: client id obtained when registering Twitter application  
+Host URL: https://api.twitter.com  
+Approval URL Suffix: /oauth/authenticate  
+Requires access token: true  
+Access Url Suffix: /oauth/access_token  
+
+For LinkedIn, the provider must be named "LinkedIn", and configured as follows:  
+
+Provider URL = https://www.linkedin.com/uas/oauth2  
+OAuth Version = 2.0  
+Supports Callback = true  
+Secret = consumer secret obtained when registering LinkedIn application  
+Client Id = client id obtained when registering LinkedIn application  
+Host Url = https://www.linkedin.com/uas/oauth2  
+Approval Url Suffix = /authorization  
+User Data String = ?response_type=code&client_id={CLIENTID}&state={STATE}&redirect_uri={REDIRECT_URI}  
+Requires access token: true  
+Access Url Suffix = /accessToken  
+Access Data String = grant_type=authorization_code&code={TOKEN}&redirect_uri={REDIRECT_URI}&client_id={CLIENTID}&client_secret={CLIENTSECRET}  
 
 When registering the application on LinkedIn developer network, set the default scopes as r_basicprofile, r_fullprofile, r_network, rw_nus
 
@@ -61,7 +70,9 @@ Create mashups for update feed, people search (if appropriate), profile (if avai
 Add definition for network in DefineSocialNetwork.js
 
 
+# Change Log
 
+8/9/2013 - Nicolas Galler - Added 3 new tabs: Social Updates, Social Profile, Social Timeline, and 1 navigation item: Social Queue.
 
 4/24/2012 - Mark Dykun - Uploaded the VFS bundle that was updated for SalesLogix 7.5.4. Note that there will be merges requred for some of the support files ensuring that the core functionality is not overwritten between service packs.
 
