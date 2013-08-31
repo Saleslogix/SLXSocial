@@ -8,8 +8,8 @@
     <ProjectGuid>{40473D26-64E1-409A-8891-4634217C782F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UKPSG.Social.Mashups</RootNamespace>
-    <AssemblyName>UKPSG.Social.Mashups</AssemblyName>
+    <RootNamespace>Saleslogix.Social.Mashups</RootNamespace>
+    <AssemblyName>Saleslogix.Social.Mashups</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -90,6 +90,7 @@
     <Compile Include="Linq\LinqCompiler.cs" />
     <Compile Include="Processors\ISocialExecutor.cs" />
     <Compile Include="Processors\LinkedinProcessor.cs" />
+    <Compile Include="Records\Linkedin\LinkedinCompany.cs" />
     <Compile Include="Records\Linkedin\LinkedinConnectionUpdate.cs" />
     <Compile Include="Records\Linkedin\LinkedinPerson.cs" />
     <Compile Include="Records\Linkedin\LinkedinStatusUpdate.cs" />
@@ -102,6 +103,7 @@
     </Compile>
     <Compile Include="Records\SocialProfileRecord.cs" />
     <Compile Include="Records\StatusUpdateRecord.cs" />
+    <Compile Include="Records\XElementExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\SR.de.resx">

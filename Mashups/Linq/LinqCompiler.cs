@@ -10,7 +10,7 @@ using System.IO;
 using Microsoft.CSharp;
 using System.Collections;
 
-namespace UKPSG.Social.Mashups.Linq
+namespace Saleslogix.Social.Mashups.Linq
 {
     // TODO: Do this work in a separate AppDomain so it can be unloaded dynamically as well
     class LinqCompiler

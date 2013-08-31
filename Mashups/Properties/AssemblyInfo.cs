@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("UKPSG.Social.Mashups")]
+[assembly: AssemblyTitle("Saleslogix.Social.Mashups")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sage")]
-[assembly: AssemblyProduct("UKPSG.Social.Mashups")]
+[assembly: AssemblyProduct("Saleslogix.Social.Mashups")]
 [assembly: AssemblyCopyright("Copyright © Sage 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

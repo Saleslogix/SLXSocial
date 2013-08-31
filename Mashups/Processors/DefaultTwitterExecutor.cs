@@ -14,13 +14,13 @@ using System.Collections.Generic;
 using System.Linq;
 using LinqToTwitter;
 using Sage.Platform.Mashups;
-using UKPSG.Social.Mashups.Linq;
+using Saleslogix.Social.Mashups.Linq;
 using System.Net;
-using UKPSG.Social.Mashups.Records;
+using Saleslogix.Social.Mashups.Records;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace UKPSG.Social.Mashups.Processors
+namespace Saleslogix.Social.Mashups.Processors
 {
     public class DefaultTwitterExecutor : ISocialExecutor
     {
@@ -76,15 +76,11 @@ namespace UKPSG.Social.Mashups.Processors
                     TwitterQueryable<LinqToTwitter.Status> q = (TwitterQueryable<LinqToTwitter.Status>)oresult;
                     //result = q.ToList().Cast<object>().SafeSelect((object item) => DefaultTwitterExecutor.CreateRecord(item, aliases)).ToArray<IRecord>();
                     result = q.ToList().SafeSelect(item => CreateStatusRecord(item)).ToArray<IRecord>();
-                }
-
-                if (oresult.GetType() == typeof(TwitterQueryable<LinqToTwitter.User>))
+                } else if (oresult.GetType() == typeof(TwitterQueryable<LinqToTwitter.User>))
                 {
                     TwitterQueryable<LinqToTwitter.User> q = (TwitterQueryable<LinqToTwitter.User>)oresult;
                     result = q.ToList().Cast<object>().SafeSelect((object item) => DefaultTwitterExecutor.CreateRecord(item, aliases)).ToArray<IRecord>();
-                }
-
-                if (oresult.GetType() == typeof(TwitterQueryable<LinqToTwitter.Search>))
+                } else if (oresult.GetType() == typeof(TwitterQueryable<LinqToTwitter.Search>))
                 {
                     TwitterQueryable<LinqToTwitter.Search> q = (TwitterQueryable<LinqToTwitter.Search>)oresult;
                     // for the search operation, select the statuses as an array
@@ -105,14 +101,17 @@ namespace UKPSG.Social.Mashups.Processors
                         return new IRecord[] { };
                     }
                 }
+                throw new MashupException(string.Format("{0}{1}{2}", Saleslogix.Social.Mashups.Properties.Resources.DefaultQueryExecutor_UnableToExecuteQuery, System.Environment.NewLine, ex.Message), ex);
             }
             catch (Exception ex)
             {
-                throw new MashupException(string.Format("{0}{1}{2}", UKPSG.Social.Mashups.Properties.Resources.DefaultQueryExecutor_UnableToExecuteQuery, System.Environment.NewLine, ex.Message), ex);
+                throw new MashupException(string.Format("{0}{1}{2}", Saleslogix.Social.Mashups.Properties.Resources.DefaultQueryExecutor_UnableToExecuteQuery, System.Environment.NewLine, ex.Message), ex);
             }
 
-            return result;
+            if(result != null)
+                return result;
 
+            throw new MashupException(Saleslogix.Social.Mashups.Properties.Resources.DefaultQueryExecutor_UnableToExecuteQuery);
 
 
 
@@ -198,7 +197,7 @@ namespace UKPSG.Social.Mashups.Processors
             if(String.IsNullOrEmpty(status.User.ScreenName))
                 status.User.ScreenName = status.User.Identifier.ScreenName;
             if(String.IsNullOrEmpty(status.User.UserID))
-                status.User.UserID = status.User.Identifier.UserID;
+                status.User.UserID = status.User.Identifier.UserID;                        
             return RecordBase.CreateRecord(new StatusUpdateRecord
             {
                 User = new SocialProfileRecord
@@ -206,16 +205,21 @@ namespace UKPSG.Social.Mashups.Processors
                     UserID = status.User.UserID,
                     Description = status.User.Description,
                     LastName = status.User.Name,
-                    ScreenName = status.User.ScreenName,
-                    ProfileImageUrl = status.User.ProfileImageUrl,
-                    ProfileImageUrlHttps = status.User.ProfileImageUrlHttps,
-                    ProfileUrl = status.User.Url
+                    FirstName = "",
+                    ScreenName = "@" + status.User.ScreenName,
+                    PictureUrl = String.IsNullOrEmpty(status.User.ProfileImageUrlHttps) ? status.User.ProfileImageUrl : status.User.ProfileImageUrlHttps,
+                    //ProfileUrl = status.User.Url ?? ("https://twitter.com/" + status.User.ScreenName)
+                    // per Twitter guidelines we actually need this one to go to the Twitter profile, not their specified URL
+                    ProfileUrl = "https://twitter.com/" + status.User.ScreenName
                 },
+                Favorited = status.Favorited,
+                Retweeted = status.Retweeted,
                 StatusID = status.StatusID,
                 Text = Twitterize(status.Text),
                 CreatedAt = status.CreatedAt,
                 Icon = "tweet.ico",
-                StatusUrl = String.Format(TWITTER_STATUS_URL, status.User.ScreenName, status.StatusID)
+                StatusUrl = String.Format(TWITTER_STATUS_URL, status.User.ScreenName, status.StatusID),
+                SocialNetwork = "Twitter"
             });            
         }
 

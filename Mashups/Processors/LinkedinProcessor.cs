@@ -5,15 +5,15 @@ using System.Text;
 using Sage.Platform.Mashups;
 using Sage.Platform.Mashups.Processors;
 using Sage.Platform.Mashups.Records;
-using UKPSG.Social.Mashups.Localization;
+using Saleslogix.Social.Mashups.Localization;
 using System.Net;
 using System.Xml.Linq;
 using System.Web;
-using UKPSG.Social.Mashups.Records.Linkedin;
-using UKPSG.Social.Mashups.Records;
+using Saleslogix.Social.Mashups.Records.Linkedin;
+using Saleslogix.Social.Mashups.Records;
 using System.ComponentModel;
 
-namespace UKPSG.Social.Mashups.Processors
+namespace Saleslogix.Social.Mashups.Processors
 {
     /// <summary>
     /// LinkedIn Mashup
@@ -26,10 +26,12 @@ namespace UKPSG.Social.Mashups.Processors
         private const String URL_NETWORK_UPDATE_BYMEMBER = "https://api.linkedin.com/v1/people/id={0}/network/updates?scope=self";
         private const String URL_PEOPLE_SEARCH = "https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,picture-url,headline,public-profile-url))?keywords={0}&sort=relevance";
         private const String URL_PROFILE_API = "https://api.linkedin.com/v1/people/id={0}:(id,first-name,last-name,picture-url,headline,public-profile-url,formatted-name,location:(name),industry,summary,specialties,positions,educations)";
+        private const String URL_COMPANY_SEARCH_API = "https://api.linkedin.com/v1/company-search:(companies:(id,name,square-logo-url,logo-url))?keywords={0}&sort=relevance";
+        private const String URL_BUSINESS_PROFILE_API = "https://api.linkedin.com/v1/companies/{0}:(id,name,ticker,website-url,specialties,square-logo-url,logo-url,employee-count-range,locations:(description,address:(city,state)),description,founded-year,end-year)";
         private const int LINKEDIN_DEFAULT_MAXRESULTS = 50;
 
         private String _queryType = "Social";
-        [Description("Type of information we want to retrieve: 'Social' (for status updates), 'People' (for user search), 'Profile' (for retrieving a person's profile)")]
+        [Description("Type of information we want to retrieve: 'Social' (for status updates), 'People' (for user search), 'Companies' (for company search), 'BusinessProfile' (for a company profile), 'Profile' (for retrieving a person's profile)")]
         public String QueryType
         {
             get { return this._queryType; }
@@ -95,8 +97,55 @@ namespace UKPSG.Social.Mashups.Processors
                     return ExecutePeopleSearch(auth, runtimeParams);
                 case "Profile":
                     return ExecuteProfileSearch(auth, runtimeParams);
+                case "Companies":
+                    return ExecuteCompanySearch(auth, runtimeParams);
+                case "BusinessProfile":
+                    return ExecuteBusinessProfileSearch(auth, runtimeParams);
                 default:
                     throw new Exception("Unexpected QueryType value '" + QueryType + "'.  Valid values are Social, People.");
+            }
+        }
+
+        private IEnumerable<IRecord> ExecuteCompanySearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
+        {
+            WebClient client = new WebClient();
+            if (runtimeParams.ContainsKey("Search"))
+                Search = (String)runtimeParams["Search"];
+            if (String.IsNullOrEmpty(Search))
+                throw new Exception("This method requires a Search parameter");
+            String url = String.Format(URL_COMPANY_SEARCH_API, HttpUtility.UrlEncode(Search));
+            url = AddAuthentication(url, auth);
+            if (MaximumResults != null)
+                url += String.Format("&count={0}", MaximumResults);
+            String data = Encoding.UTF8.GetString(client.DownloadData(url));
+            XDocument xml = XDocument.Parse(data);
+            foreach (XElement personNode in xml.Descendants("company"))
+            {
+                yield return RecordBase.CreateRecord(new LinkedinCompany(personNode));
+            }
+        }
+
+
+        private IEnumerable<IRecord> ExecuteBusinessProfileSearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
+        {
+            // we still call the parameter "LinkedInUser" so we can use the same client-side code as with the user profile mashup
+            if (runtimeParams.ContainsKey("LinkedInUser"))
+            {
+                LinkedInUser = (String)runtimeParams["LinkedInUser"];
+            }
+            if (String.IsNullOrEmpty(LinkedInUser))
+            {
+                throw new Exception("This method requires a LinkedInUser parameter");
+            }
+
+            String url = String.Format(URL_BUSINESS_PROFILE_API, LinkedInUser);
+            url = AddAuthentication(url, auth);
+            WebClient client = new WebClient();
+            String data = Encoding.UTF8.GetString(client.DownloadData(url));
+            XDocument xml = XDocument.Parse(data);
+            foreach (XElement personNode in xml.Descendants("company"))
+            {
+                yield return RecordBase.CreateRecord(new LinkedinCompany(personNode));
             }
         }
 

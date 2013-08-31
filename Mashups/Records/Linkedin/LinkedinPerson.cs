@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace UKPSG.Social.Mashups.Records.Linkedin
+namespace Saleslogix.Social.Mashups.Records.Linkedin
 {
     public class LinkedinPerson : SocialProfileRecord
     {
@@ -31,7 +31,7 @@ namespace UKPSG.Social.Mashups.Records.Linkedin
             else if(personNode.Element("public-profile-url") != null)
                 ProfileUrl = personNode.Element("public-profile-url").Value;
             if(personNode.Element("picture-url") != null)
-                ProfileImageUrl = personNode.Element("picture-url").Value;
+                PictureUrl = personNode.Element("picture-url").Value;
             if(personNode.Element("formatted-name") != null)
                 FormattedName = personNode.Element("formatted-name").Value;
             if (String.IsNullOrEmpty(FormattedName))

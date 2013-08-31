@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SlxClient", "..\..\inetpub\
 		VWDPort = "49333"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKPSG.Social.Mashups", ".\Mashups\UKPSG.Social.Mashups.csproj", "{40473D26-64E1-409A-8891-4634217C782F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saleslogix.Social.Mashups", "Mashups\Saleslogix.Social.Mashups.csproj", "{40473D26-64E1-409A-8891-4634217C782F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,6 @@ Global
 		{D527343F-52D5-45DF-9C4A-DBC89A42488F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D527343F-52D5-45DF-9C4A-DBC89A42488F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{D527343F-52D5-45DF-9C4A-DBC89A42488F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{5B84C407-721D-40EB-AE8C-8A98772B021A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B84C407-721D-40EB-AE8C-8A98772B021A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B84C407-721D-40EB-AE8C-8A98772B021A}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{40473D26-64E1-409A-8891-4634217C782F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40473D26-64E1-409A-8891-4634217C782F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40473D26-64E1-409A-8891-4634217C782F}.Release|Any CPU.ActiveCfg = Release|Any CPU

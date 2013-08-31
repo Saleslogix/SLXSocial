@@ -7,7 +7,7 @@ using Sage.Entity.Interfaces;
 using Sage.Platform.Application;
 using Sage.Platform.Security;
 
-namespace UKPSG.Social.Mashups.Processors
+namespace Saleslogix.Social.Mashups.Processors
 {
     /// <summary>
     /// Used to hold the OAuth parameters that are stored in the database

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace UKPSG.Social.Mashups.Records.Linkedin
+namespace Saleslogix.Social.Mashups.Records.Linkedin
 {
     public class LinkedinStatusUpdate : StatusUpdateRecord
     {
@@ -22,6 +22,7 @@ namespace UKPSG.Social.Mashups.Records.Linkedin
             User = new LinkedinPerson(authorNode);
             if(authorNode.Element("current-status") != null)
                 Text = authorNode.Element("current-status").Value;
+            SocialNetwork = "LinkedIn";
         }
 
         private DateTime ConvertUnixTimestamp(string timestamp)

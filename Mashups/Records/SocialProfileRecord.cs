@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Sage.Platform.Mashups.Records;
 
-namespace UKPSG.Social.Mashups.Records
+namespace Saleslogix.Social.Mashups.Records
 {
     /// <summary>
     /// Represent a person
@@ -15,9 +15,8 @@ namespace UKPSG.Social.Mashups.Records
         public String LastName { get; set; }
         public String FirstName { get; set; }
         public String FormattedName { get; set; }
-        public String ProfileImageUrl { get; set; }
         public String Title { get; set; }
-        public String ProfileImageUrlHttps { get; set; }
+        public String PictureUrl { get; set; }
         public String ProfileUrl { get; set; }
         public String ScreenName { get; set; }
         public String Description { get; set; }

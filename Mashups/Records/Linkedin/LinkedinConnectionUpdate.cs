@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using UKPSG.Social.Mashups.Records;
+using Saleslogix.Social.Mashups.Records;
 
-namespace UKPSG.Social.Mashups.Records.Linkedin
+namespace Saleslogix.Social.Mashups.Records.Linkedin
 {
     /// <summary>
     /// Represent a CONN update (a new Linkedin connection)
@@ -25,6 +25,7 @@ namespace UKPSG.Social.Mashups.Records.Linkedin
             Connection = new LinkedinPerson(authorNode.Element("connections").Element("person"));
             Text = String.Format("{0} is now connected with {1}",
                 User.ToString(), Connection.ToString());
+            SocialNetwork = "LinkedIn";
         }
 
         private DateTime ConvertUnixTimestamp(string timestamp)

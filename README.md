@@ -1,11 +1,14 @@
 # Installation
 
-## SalesLogix Bundle
+## Installation Instructions
 
-There are 2 bundles: _SalesLogix OAuth Integration_ has the OAuth changes and _Social Profile_ has the new social tabs.
-They both contain schema changes.  Prior to installing the social profile bundle, the Mashup Provider DLL 
-_UKPSG.Social.Mashups.dll_ must be registered with Application Architect by copying
-it to C:\Program Files (x86)\SalesLogix\Platform.  The DLL can be found inside of the Social Profile bundle.
+1. Copy the DLL Saleslogix.Social.Mashups.dll to C:\Program Files (x86)\SalesLogix\Platform
+2. Install the 2 bundles: _SalesLogix OAuth Integration_ has the OAuth changes and _Social Profile_ has the new social tabs.
+3. Optionally, add the following directive to %ALLUSERSPROFILE%\Sage\Platform\Configuration\Global\MashupConfiguration.xml
+(this will allow declaration of other mashups making used of the Linkedin and Twitter providers):  
+
+    <processorType>Saleslogix.Social.Mashups.Processors.TwitterProcessor, Saleslogix.Social.Mashups</processorType>
+    <processorType>Saleslogix.Social.Mashups.Processors.LinkedinProcessor, Saleslogix.Social.Mashups</processorType>
 
 ## Social Network Configuration
 

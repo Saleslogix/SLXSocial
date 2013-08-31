@@ -17,15 +17,15 @@ using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
 
-using UKPSG.Social.Mashups.Localization;
+using Saleslogix.Social.Mashups.Localization;
 
 
-namespace UKPSG.Social.Mashups.Processors
+namespace Saleslogix.Social.Mashups.Processors
 {
     [SRDisplayName("TwitterProcessor_DisplayName"), System.Xml.Serialization.XmlRoot("queryProcessor")]
     public class TwitterProcessor : InputProcessorBase
     {
-        private const String TWITTER_OAUTHPROVIDER_NAME = "Twitter OAuth";
+        private const String TWITTER_OAUTHPROVIDER_NAME = "Twitter";
         private readonly TemplateValue _query = new TemplateValue();
         private int? _maximumResults;
         private ISocialExecutor _executor;
@@ -190,7 +190,7 @@ namespace UKPSG.Social.Mashups.Processors
             if (string.IsNullOrEmpty(this.Query))
             {
                 result = false;
-                EditableBase.AddError(errorList, "Query", string.Format(UKPSG.Social.Mashups.Properties.Resources.PropertyCannotBeEmpty, SR.GetString("TwitterProcessor_Query_DisplayName")));
+                EditableBase.AddError(errorList, "Query", string.Format(Saleslogix.Social.Mashups.Properties.Resources.PropertyCannotBeEmpty, SR.GetString("TwitterProcessor_Query_DisplayName")));
             }
             else
             {

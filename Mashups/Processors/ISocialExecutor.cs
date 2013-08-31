@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UKPSG.Social.Mashups.Processors
+namespace Saleslogix.Social.Mashups.Processors
 {
     public interface ISocialExecutor
     {
