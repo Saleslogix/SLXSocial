@@ -196,4 +196,17 @@
   <data name="Linkedin_LinkedInUser_Description" xml:space="preserve">
     <value>User id to display updates from.  Note this is the LinkedIn internal user id (a short alphanumeric string), NOT the user's name or email address</value>
   </data>
+  <data name="LinkedinProcessor_NewJob" xml:space="preserve">
+    <value>New Job Posting: {0} ({1}).  {2}</value>
+    <comment>New Job: Title (Locaiton).  Description</comment>
+  </data>
+  <data name="LinkedinProcessor_NewProduct" xml:space="preserve">
+    <value>Product added to the company products page: {0}</value>
+  </data>
+  <data name="LinkedProcessor_ChangedPosition" xml:space="preserve">
+    <value>{0} changed position to {1}</value>
+  </data>
+  <data name="LinkedProcessor_NewHire" xml:space="preserve">
+    <value>{0} was hired as {1}</value>
+  </data>
 </root>

@@ -28,10 +28,11 @@ namespace Saleslogix.Social.Mashups.Processors
         private const String URL_PROFILE_API = "https://api.linkedin.com/v1/people/id={0}:(id,first-name,last-name,picture-url,headline,public-profile-url,formatted-name,location:(name),industry,summary,specialties,positions,educations)";
         private const String URL_COMPANY_SEARCH_API = "https://api.linkedin.com/v1/company-search:(companies:(id,name,square-logo-url,logo-url))?keywords={0}&sort=relevance";
         private const String URL_BUSINESS_PROFILE_API = "https://api.linkedin.com/v1/companies/{0}:(id,name,ticker,website-url,specialties,square-logo-url,logo-url,employee-count-range,locations:(description,address:(city,state)),description,founded-year,end-year)";
+        private const String URL_COMPANY_SHARES_API = "https://api.linkedin.com/v1/companies/{0}/updates";
         private const int LINKEDIN_DEFAULT_MAXRESULTS = 50;
 
         private String _queryType = "Social";
-        [Description("Type of information we want to retrieve: 'Social' (for status updates), 'People' (for user search), 'Companies' (for company search), 'BusinessProfile' (for a company profile), 'Profile' (for retrieving a person's profile)")]
+        [Description("Type of information we want to retrieve: 'Social' (for status updates), 'People' (for user search), 'Companies' (for company search), 'BusinessProfile' (for a company profile), 'Profile' (for retrieving a person's profile), 'CompanyShares' (for reading a company's updates)")]
         public String QueryType
         {
             get { return this._queryType; }
@@ -99,10 +100,44 @@ namespace Saleslogix.Social.Mashups.Processors
                     return ExecuteProfileSearch(auth, runtimeParams);
                 case "Companies":
                     return ExecuteCompanySearch(auth, runtimeParams);
+                case "CompanyShares":
+                    return ExecuteCompanySharesSearch(auth, runtimeParams);
                 case "BusinessProfile":
                     return ExecuteBusinessProfileSearch(auth, runtimeParams);
                 default:
                     throw new Exception("Unexpected QueryType value '" + QueryType + "'.  Valid values are Social, People.");
+            }
+        }
+
+        private IEnumerable<IRecord> ExecuteCompanySharesSearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
+        {
+            WebClient client = new WebClient();
+            // we still call the parameter "LinkedInUser" so we can use the same client-side code as with the user profile mashup
+            if (runtimeParams.ContainsKey("LinkedInUser"))
+            {
+                LinkedInUser = (String)runtimeParams["LinkedInUser"];
+            }
+            if (String.IsNullOrEmpty(LinkedInUser))
+            {
+                throw new Exception("This method requires a LinkedInUser parameter");
+            }
+
+            // fetch the profile first, because it is used to decorate the returned updates
+            IRecord profileRecord = ExecuteBusinessProfileSearch(auth, runtimeParams).FirstOrDefault();
+
+            String url = String.Format(URL_COMPANY_SHARES_API, HttpUtility.UrlEncode(LinkedInUser));
+            url = AddAuthentication(url, auth);            
+            url += String.Format("&count={0}", MaximumResults ?? LINKEDIN_DEFAULT_MAXRESULTS);
+            String data = Encoding.UTF8.GetString(client.DownloadData(url));
+            XDocument xml = XDocument.Parse(data);
+            foreach (XElement updateNode in xml.Descendants("update"))
+            {
+                LinkedinCompanyShare rec = LinkedinCompanyShare.MakeRecord(updateNode, profileRecord);
+                if (rec != null)
+                {
+                    rec.Icon = "LinkedIn_Logo16px.png";
+                    yield return RecordBase.CreateRecord(rec);
+                }
             }
         }
 

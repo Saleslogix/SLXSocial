@@ -91,6 +91,7 @@
     <Compile Include="Processors\ISocialExecutor.cs" />
     <Compile Include="Processors\LinkedinProcessor.cs" />
     <Compile Include="Records\Linkedin\LinkedinCompany.cs" />
+    <Compile Include="Records\Linkedin\LinkedinCompanyShare.cs" />
     <Compile Include="Records\Linkedin\LinkedinConnectionUpdate.cs" />
     <Compile Include="Records\Linkedin\LinkedinPerson.cs" />
     <Compile Include="Records\Linkedin\LinkedinStatusUpdate.cs" />

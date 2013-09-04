@@ -187,6 +187,42 @@ namespace Saleslogix.Social.Mashups.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Job Posting: {0} ({1}).  {2}.
+        /// </summary>
+        internal static string LinkedinProcessor_NewJob {
+            get {
+                return ResourceManager.GetString("LinkedinProcessor_NewJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product added to the company products page: {0}.
+        /// </summary>
+        internal static string LinkedinProcessor_NewProduct {
+            get {
+                return ResourceManager.GetString("LinkedinProcessor_NewProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} changed position to {1}.
+        /// </summary>
+        internal static string LinkedProcessor_ChangedPosition {
+            get {
+                return ResourceManager.GetString("LinkedProcessor_ChangedPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} was hired as {1}.
+        /// </summary>
+        internal static string LinkedProcessor_NewHire {
+            get {
+                return ResourceManager.GetString("LinkedProcessor_NewHire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name &apos;{0}&apos; already exists.
         /// </summary>
         internal static string Mashup_NameAlreadyExists {
