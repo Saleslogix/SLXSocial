@@ -70,10 +70,22 @@ namespace Saleslogix.Social.Mashups.Records.Linkedin
 
         private void PopulateStatusUpdate(XElement statusUpdateNode)
         {
-            XElement contentNode = statusUpdateNode.Element("share").Element("content");
-            this.PictureUrl = contentNode.Element("submitted-image-url").SafeValue();
-            this.Text = contentNode.Element("description").SafeValue();
-            this.StatusUrl = contentNode.Element("submitted-url").SafeValue();
+            XElement shareNode = statusUpdateNode.Element("share");
+            if (shareNode == null)
+                return;
+            XElement contentNode = shareNode.Element("content");
+            if (contentNode != null)
+            {
+                this.PictureUrl = contentNode.Element("submitted-image-url").SafeValue();
+                this.StatusUrl = contentNode.Element("submitted-url").SafeValue();
+                this.Text = contentNode.Element("description").SafeValue();  // this one is not often supplied
+            }
+
+            // usually we get the description from the comment instead
+            if (shareNode.Element("comment") != null)
+            {
+                this.Text = shareNode.Element("comment").Value;
+            }
         }
 
         private void PopulatePersonUpdate(XElement personUpdateNode)
