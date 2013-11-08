@@ -1,0 +1,5 @@
+Model/deployment/*
+Model/Deleted Items/*
+modelindex.xml
+Debug
+Release
