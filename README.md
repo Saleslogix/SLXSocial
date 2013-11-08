@@ -2,8 +2,8 @@
 
 ## Installation Instructions
 
-1. Copy the DLL Saleslogix.Social.Mashups.dll to C:\Program Files (x86)\SalesLogix\Platform
-2. Install the 2 bundles: _SalesLogix OAuth Integration_ has the OAuth changes and _Social Profile_ has the new social tabs.
+1. Copy the DLL Saleslogix.Social.Mashups.dll (from the bundle) to C:\Program Files (x86)\SalesLogix\Platform
+2. Install the bundle: _Saleslogix Social Buzz_ has the new social tabs.
 3. Optionally, add the following directive to %ALLUSERSPROFILE%\Sage\Platform\Configuration\Global\MashupConfiguration.xml
 (this will allow declaration of other mashups making used of the Linkedin and Twitter providers):  
 
@@ -74,6 +74,8 @@ Add definition for network in DefineSocialNetwork.js
 
 
 # Change Log
+
+11/2/2013 - Nicolas Galler - Updated LinktoTwitter library, removed OAuth bundle as it is no longer necessary with 8.0 HF4
 
 8/9/2013 - Nicolas Galler - Added 3 new tabs: Social Updates, Social Profile, Social Timeline, and 1 navigation item: Social Queue.
 
