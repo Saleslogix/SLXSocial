@@ -16,13 +16,15 @@ public partial class SmartParts_Social_SocialTimeline : EntityBoundSmartPartInfo
 
         ScriptManager.RegisterStartupScript(this, GetType(), "SocialTimelineApp", String.Format(@"
 require({{ packages: [ {{ name: 'SLXSocial', location: '../../../SmartParts/Social/js' }} ] }}, 
-    ['SLXSocial/SocialTimeline/App'], 
-    function(App) {{
-        var app = new App(document.getElementById('{0}'), '{1}');
-        app.startAll();
+    ['SLXSocial/SocialTimeline/App', 'dojo/ready'], 
+    function(App, ready) {{
+        ready(10000, function() {{
+            var app = new App(document.getElementById('{0}'), '{1}', '{2}');
+            app.startAll();
+        }});
     }}
 );
-", placeholder.ClientID, cmdFilter.ClientID), true);
+", placeholder.ClientID, cmdFilter.ClientID, cmdAddProfile.ClientID), true);
     }
 
     public override Type EntityType
@@ -37,6 +39,7 @@ require({{ packages: [ {{ name: 'SLXSocial', location: '../../../SmartParts/Soci
     public override Sage.Platform.Application.UI.ISmartPartInfo GetSmartPartInfo(Type smartPartInfoType)
     {
         var ti = new ToolsSmartPartInfo();
+        ti.RightTools.Add(cmdAddProfile);
         ti.RightTools.Add(cmdFilter);
         return ti;
     }

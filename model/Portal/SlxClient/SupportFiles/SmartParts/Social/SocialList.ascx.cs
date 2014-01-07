@@ -16,10 +16,12 @@ public partial class SmartParts_Social_WebUserControl : System.Web.UI.UserContro
     {
         ScriptManager.RegisterStartupScript(this, GetType(), "SocialQueueApp", String.Format(@"
 require({{ packages: [ {{ name: 'SLXSocial', location: '../../../SmartParts/Social/js' }} ] }}, 
-    ['SLXSocial/SocialQueue/App'], 
-    function(App) {{
-        var app = new App(document.getElementById('{0}'));
-        app.startAll();
+    ['SLXSocial/SocialBuzz/App', 'dojo/ready'], 
+    function(App, ready) {{
+        ready(10000, function() {{
+            var app = new App(document.getElementById('{0}'));
+            app.startAll();
+        }});
     }}
 );
 ", content.ClientID) , true);

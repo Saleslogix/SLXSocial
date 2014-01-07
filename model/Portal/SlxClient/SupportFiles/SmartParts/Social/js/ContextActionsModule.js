@@ -42,7 +42,10 @@ function (declare, lang, djString, Utility, Resources) {
             svc._historyEditor.set('activityType', 'Note');
             svc._historyEditor.set('mode', 'New');
             svc._historyEditor.set('historyId', '');
-            svc._historyEditor.show({ LongNotes: notes });
+            svc.getActivityEntityContext(svc._historyEditor, function (scope, context) {
+                context.LongNotes = notes;
+                svc._historyEditor.show(context);
+            });
         },
 
         _newCompetitiveThreat: function (status) {
@@ -61,14 +64,20 @@ function (declare, lang, djString, Utility, Resources) {
             var notes = this._expandVariables(Resources.activityNotesText, status);
 
             var activityService = Sage.Services.getService('ActivityService');
-            activityService.scheduleActivity({ type: 'PhoneCall', preConfigured: { LongNotes: notes} });
+            activityService.getActivityEntityContext(activityService._activityEditor, function (scope, context) {
+                context.LongNotes = notes;
+                activityService.scheduleActivity({ type: 'PhoneCall', preConfigured: context });
+            });
         },
 
         _newTodo: function (status) {
             var notes = this._expandVariables(Resources.activityNotesText, status);
 
             var activityService = Sage.Services.getService('ActivityService');
-            activityService.scheduleActivity({ type: 'ToDo', preConfigured: { LongNotes: notes} });
+            activityService.getActivityEntityContext(activityService._activityEditor, function (scope, context) {
+                context.LongNotes = notes;
+                activityService.scheduleActivity({ type: 'ToDo', preConfigured: context });
+            });
         },
 
         _newFeatureRequest: function (status) {
@@ -100,7 +109,7 @@ function (declare, lang, djString, Utility, Resources) {
         },
 
         _expandVariables: function (template, status) {
-            var result = djString.substitute(template, { user: status.user.name, text: status.text, source: status.source });
+            var result = djString.substitute(template, { user: status.user.name, text: status.text, source: status.socialNetwork });
             result = Utility.stripHTML(result);
             return result;
         }

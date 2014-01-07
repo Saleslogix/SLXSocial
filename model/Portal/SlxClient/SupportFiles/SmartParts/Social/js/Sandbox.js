@@ -4,8 +4,8 @@
 * All application modules are added to the sandbox and use it to interact with other modules.
 */
 
-define(['dojo/_base/declare', 'dojo/_base/Deferred', 'Sage/UI/Dialogs'],
-function (declare, Deferred, SageDialogs) {
+define(['dojo/_base/declare', 'dojo/_base/lang', 'dojo/_base/Deferred', 'Sage/UI/Dialogs'],
+function (declare, lang, Deferred, SageDialogs) {
     var sandboxbase = declare(null, {
         // the sandbox is how modules will get to interact with the rest of the app
         constructor: function (core, module) {
@@ -33,10 +33,13 @@ function (declare, Deferred, SageDialogs) {
         getParameter: function (param) {
             return this._core.getParameter(param);
         },
-        addSubModule: function (module) {
+        addModule: function (module) {
             // really just a wrapper to add a module to the core at this point
             this._core.addModule(module);
             return module;
+        },
+        removeModule: function (module) {
+            this._core.removeModule(module);
         },
         error: function (err) {
             if (typeof console != "undefined")
@@ -94,8 +97,8 @@ function (declare, Deferred, SageDialogs) {
                 //  Additional parameters to the method will be passed to the handler.
                 //  Additionally an "Event" parameter will be passed as last parameter, which can be used
                 //  to prevent further propagation.
-                if (typeof console != "undefined")
-                    console.log('Sandbox event: ' + topic);
+                //                if (typeof console != "undefined")
+                //                    console.log('Sandbox event: ' + topic, arguments);
                 if (this._evtHandlers[topic]) {
                     var args = Array.prototype.slice.call(arguments, 2);
                     var hh = this._evtHandlers[topic];
@@ -113,6 +116,20 @@ function (declare, Deferred, SageDialogs) {
                 var sb = new sandboxbase(this, module);
                 module.initModule(sb);
                 return this;
+            },
+
+            // remove all handlers that module is the subscriber for
+            removeModule: function (module) {
+                for (var topic in this._evtHandlers) {
+                    var hh = this._evtHandlers[topic];
+                    if (lang.isArray(hh)) {
+                        for (var i = hh.length - 1; i >= 0; i--) {
+                            if (hh[i].scope === module) {
+                                hh.splice(i, 1);
+                            }
+                        }
+                    }
+                }
             },
 
             // mmm start all the modules
@@ -146,8 +163,10 @@ function (declare, Deferred, SageDialogs) {
 
             xhrGet: function (url, data) {
                 var args = [];
-                for (var k in data) {
-                    args.push(encodeURIComponent(k) + "=" + encodeURIComponent(data[k]));
+                if (data) {
+                    for (var k in data) {
+                        args.push(encodeURIComponent(k) + "=" + encodeURIComponent(data[k]));
+                    }
                 }
                 return this._ajax(url + "?" + args.join("&"), dojo.xhrGet);
             },
@@ -170,6 +189,12 @@ function (declare, Deferred, SageDialogs) {
                     sb.publish("Ajax/End");
                     return data;
                 }, function (err) {
+                    if (/^\[/.test(err.responseText) && /\]$/.test(err.responseText)) {
+                        // sdata error message, try to collect it and add it to the response
+                        try {
+                            err.message = JSON.parse(err.responseText)[0].message;
+                        } catch(e) {}
+                    }
                     sb.warn(err.message || "Ajax request failed: unknown error");
                     sb.publish("Ajax/End");
                     // make sure we return a new deferred so the caller can register their own handler
@@ -255,8 +280,9 @@ function (declare, Deferred, SageDialogs) {
                 //  Retrieve SData resources matching the specified criteria
                 var svc = Sage.Utility.getSDataService();
                 var req = new Sage.SData.Client.SDataResourceCollectionRequest(svc)
-                .setResourceKind(resourceKind)
-                .setQueryArg("where", where);
+                .setResourceKind(resourceKind);
+                if (where)
+                    req.setQueryArg("where", where);
                 if (queryArgs)
                     req.setQueryArgs(queryArgs);
                 var def = new dojo.Deferred();

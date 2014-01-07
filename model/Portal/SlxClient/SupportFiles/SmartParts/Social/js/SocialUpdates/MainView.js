@@ -1,26 +1,32 @@
 ﻿define(['dojo/_base/declare', 'dijit/_Widget',
-    '../SocialQueue/ResultPanel', '../SocialProfile/FilterPanel', 'dijit/_TemplatedMixin'],
-function (declare, _Widget, ResultPanel, FilterPanel, _TemplatedMixin) {
+    '../SocialBuzz/ResultPanel', '../SocialProfile/SocialProfileSelector', '../SocialProfile/DefaultPanel', 'dijit/_TemplatedMixin', '../Utility'],
+function (declare, _Widget, ResultPanel, SocialProfileSelector, DefaultPanel, _TemplatedMixin, Utility) {
     // Main view for the social queue
     // Responsible for creating Result Panel, Filter Panel, 
     return declare([_Widget, _TemplatedMixin], {
-        templateString: "<table style='width: 100%' class='social-updates'>" +
-            "<tr><td data-dojo-attach-point='tdLeft' style='vertical-align: top'></td>" +
+        templateString: "<table style='width: 100%' class='social-profile'>" +
+            "<tr><td data-dojo-attach-point='tdLeft' style='vertical-align: top'></td></tr><tr>" +
             "<td data-dojo-attach-point='tdRight' style='width: 100%; vertical-align: top'></td></tr>" +
             "</table>",
-        cmdFilterId: "",  // id of button used to toggle filter panel
+        cmdFilterToolId: "",  // id of button used to toggle filter panel
+        cmdAddProfileToolId: "",
 
         initModule: function (app) {
             this._app = app;
 
-            var filter = new FilterPanel({ style: "width: 100px", cmdFilterId: this.cmdFilterId });
+            var filter = new SocialProfileSelector({ cmdFilterToolId: this.cmdFilterToolId, cmdAddProfileToolId: this.cmdAddProfileToolId });
             this.tdLeft.appendChild(filter.domNode);
-            app.addSubModule(filter);
+            app.addModule(filter);
 
+
+            var def = new DefaultPanel({});
+            this.tdRight.appendChild(def.domNode);
+            app.addModule(def);
 
             var result = new ResultPanel({ style: "max-height: 300px; overflow: auto" });
             this.tdRight.appendChild(result.domNode);
-            app.addSubModule(result);
+            app.addModule(result);
+            Utility.loadCss("SmartParts/Social/css/Social.css");
         },
 
         postCreate: function () {

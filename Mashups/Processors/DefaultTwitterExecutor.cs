@@ -25,6 +25,7 @@ namespace Saleslogix.Social.Mashups.Processors
     public class DefaultTwitterExecutor : ISocialExecutor
     {
         private const string TWITTER_STATUS_URL = "http://twitter.com/{0}/status/{1}";
+        private const int DEFAULT_TIMEOUT = 10000;  // 10 seconds
 
         public IRecord[] Execute(string query,
                           int? maximumResults,
@@ -59,6 +60,7 @@ namespace Saleslogix.Social.Mashups.Processors
             auth.OAuthTwitter.OAuthToken = OAuthToken;
             auth.OAuthTwitter.OAuthTokenSecret = OAuthTokenSecret;
             var twitterCtx = new TwitterContext(auth);
+            twitterCtx.Timeout = DEFAULT_TIMEOUT;
 
             LinqCompiler lc = new LinqCompiler("");
             lc.Query = query;

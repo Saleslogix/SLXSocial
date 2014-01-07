@@ -1,14 +1,19 @@
 ﻿/*
 * Configuration of the social profile for a single social network.
 *
+* TODO: this should be broken down in 2 modules at least, it is a bit too big right now
+*
 * Events in: 
 *   App/Start - load initial configuration
 *   SocialProfile/Updated - indicates another module has updated the profile (we'll save it to the DB at that time)
+*   SocialProfile/Delete
 *
 * Events out:
 *   SocialProfile/Loaded - indicate configuration has been loaded for a social profile
-*   SocialProfile/Updated - indicate the user has provided configuration (user name) for a social profile
+*   SocialProfile/Configured - indicate the user has provided configuration (user name) for a social profile
 *   SocialProfile/Saved - indicates the social profile has been committed to the DB
+*   SocialNetwork/Defined - indicates the social network has been defined  
+*   SocialProfile/Deleted
 */
 define(['dojo/_base/declare', 'dojo/_base/lang', 'dojo/dom-construct', 'dojo/_base/array', 'dojo/on', 'dijit/Dialog', 'Sage/UI/Dialogs',
 'dijit/form/TextBox', 'dijit/form/FilteringSelect', 'dojo/store/Memory', 'dojo/string',
@@ -19,11 +24,12 @@ Resources) {
     var UserSelection = declare(null, {
         constructor: function (userProfile) {
             this.id = userProfile.UserID;
-            this.name = userProfile.Description;
-            this.screenName = userProfile.ScreenName;
+            this.name = userProfile.Description || userProfile.LastName;
+            this.screenName = userProfile.ScreenName || this.name;
             this.profileUrl = userProfile.ProfileUrl;
-            this.label = '<img src="' + (userProfile.ProfileImageUrlHttps || userProfile.ProfileImageUrl) + '" alt="Profile picture" height="32" width="32"/>' +
-                Utility.escapeHTML(userProfile.Description);
+            var imgUrl = userProfile.PictureUrl || "ImageResource.axd?scope=global&type=Global_Images&key=Groups_32x32";
+            this.label = '<img src="' + imgUrl + '" alt="' + Resources.profilePicture + '" height="32" width="32"/>' +
+                Utility.escapeHTML(this.name);
         }
     });
     var UserSelectionDropdown = declare([FilteringSelect], {
@@ -108,6 +114,11 @@ Resources) {
             buttonPanel.appendChild(btnCancel);
             container.appendChild(buttonPanel);
 
+            on(this._txtUsername, "keyPress", lang.hitch(this, function (evt) {
+                if (evt.keyCode == 13) {
+                    this._onOkClick();
+                }
+            }));
             on(btnOk, "click", lang.hitch(this, function () { this._onOkClick() }));
             on(btnCancel, "click", lang.hitch(this, "_onCancelClick"));
 
@@ -196,16 +207,16 @@ Resources) {
 
         configure: function () {
             // used to bring up configuration for the social profile (this lets the user select the username to be associated for this entity)
-            if (!this.socialNetwork.isAuthenticated()) {
-                SageDialogs.alert(Resources.socialNetworkNotAuthenticated);
-                return;
-            }
-            var dlg = new SocialProfileConfigurationDialog({ socialProfile: this, title: this.socialNetwork.name + " - " + Resources.configureProfileText });
-            dlg.show();
+            this.socialNetwork.checkAuthentication().then(lang.hitch(this, function (isAuth) {
+                if (isAuth) {
+                    var dlg = new SocialProfileConfigurationDialog({ socialProfile: this, title: this.socialNetwork.name + " - " + Resources.configureProfileText });
+                    dlg.show();
+                }
+            }));
         },
 
         saveConfiguration: function () {
-            this._sandbox.publish("SocialProfile/Updated", this);
+            this._sandbox.publish("SocialProfile/Configured", this);
         },
 
         initModule: function (sb) {
@@ -222,6 +233,7 @@ Resources) {
         enableSearch: false,     // possible to do a search by keyword?
         entityId: null,  // current SLX entity id
         _sandbox: null,  // reference to app object
+        _authenticated: null,
 
         constructor: function (opts) {
             lang.mixin(this, opts);
@@ -229,9 +241,16 @@ Resources) {
 
         initModule: function (sb) {
             this._sandbox = sb;
-            sb.subscribe("App/Start", lang.hitch(this, "_loadConfigurationFromDatabase"));
+            sb.subscribe("App/Start", lang.hitch(this, "_onAppStart"));
+            // when the profile is updated (refreshed), we are going to go ahead and save it to the DB.
+            // most of the info is NOT saved (because it would be against TOS), but we do keep the profile image URL and name
             sb.subscribe("SocialProfile/Updated", lang.hitch(this, "_onSocialProfileUpdated"));
+            sb.subscribe("SocialProfile/Delete", lang.hitch(this, "_onSocialProfileDelete"));
+            // when the profile is configured let's go ahead and save the id to the DB
+            sb.subscribe("SocialProfile/Configured", lang.hitch(this, "_onSocialProfileConfigured"));
         },
+
+        // public API
 
         getUserMatches: function (userName) {
             // return profiles matching the specified username
@@ -254,30 +273,100 @@ Resources) {
         },
 
         isAuthenticated: function () {
-            // TODO
-            return true;
+            // check authentication (with no error message if not currently authenticated)
+            var def = new Deferred();
+            if (this._authenticated === null) {
+                var userId = Sage.Utility.getClientContextByKey("userID");
+                this._sandbox.sdata.read("userOAuthTokens", "OAuthProvider.ProviderKey eq '" + this.name + "' and User.Id eq '" + userId +
+                        "' and (ExpirationDate eq null or ExpirationDate gt '" + (new Date()).toISOString() + "')")
+                .then(lang.hitch(this, function (result) {
+                    this._authenticated = false;
+                    if (result.$resources.length > 0) {
+                        this._authenticated = true;
+                    }
+                    def.resolve(this._authenticated);
+                }));
+            } else {
+                def.resolve(this._authenticated);
+            }
+            return def;
+        },
+
+        checkAuthentication: function () {
+            // check if the user has a configured authentication for this network
+            // if they do, then return true (on a deferred)
+            // otherwise, return false, and show an error message
+            var def = new Deferred();
+            this.isAuthenticated().then(function (isAuth) {
+                if (!isAuth) {
+                    SageDialogs.raiseQueryDialog('', Resources.socialNetworkNotAuthenticated, function (selection) {
+                        if (selection) {
+                            window.location.href = "UserOptions.aspx";
+                        }
+                    }, Resources.setupNowText, Resources.cancelText, "infoIcon");
+                }
+                def.resolve(isAuth);
+            });
+            return def;
+        },
+
+        addProfile: function () {
+            // bring up configuration dialog for a new profile
+            var prof = new SocialProfile({ socialNetwork: this });
+            this._sandbox.addModule(prof);
+            prof.configure();
+        },
+
+        // App events
+
+        _onAppStart: function () {
+            this._sandbox.publish("SocialNetwork/Defined", this);
+            this._loadConfigurationFromDatabase();
         },
 
         _loadConfigurationFromDatabase: function () {
-            // load social profile info
-            // if there isn't one configured yet we'll load an empty one
-            var sb = this._sandbox;
-            sb.sdata.read("entitySocialProfiles", "EntityId eq '" + this.entityId + "' and NetworkName eq '" + this.name + "'").then(lang.hitch(this, function (result) {
-                var sp = null;
-                sp = new SocialProfile({ socialNetwork: this });
-                if (result.$resources.length > 0) {
-                    lang.mixin(sp, result.$resources[0]);
-                }
-                sb.addSubModule(sp);
-                sb.publish("SocialProfile/Loaded", sp);
+            // load social profile info, if available for this network
+            // note there can be more than 1 profile
+            var app = this._sandbox;
+
+            app.sdata.read("socialProfiles", "EntityId eq '" + this.entityId + "' and NetworkName eq '" + this.name + "'").then(lang.hitch(this, function (result) {
+                array.forEach(result.$resources, lang.hitch(this, function (profData) {
+                    var sp = null;
+
+                    sp = new SocialProfile({ socialNetwork: this });
+                    lang.mixin(sp, profData);
+                    app.addModule(sp);
+
+                    app.publish("SocialProfile/Loaded", sp);
+                }));
             })).then(null, function (err) {
-                sb.error(err);
-            }); ;
+                app.error(err);
+            });
         },
 
         _onSocialProfileUpdated: function (prof) {
+            if (prof.socialNetwork.name == this.name && prof.dirty) {
+                delete prof.dirty;  // dirty flag avoids spurious saves
+                this.saveSocialProfile(prof);
+            }
+        },
+
+        _onSocialProfileConfigured: function (prof) {
             if (prof.socialNetwork.name == this.name)
                 this.saveSocialProfile(prof);
+        },
+
+        _onSocialProfileDelete: function (prof) {
+            if (prof.socialNetwork.name == this.name) {
+                var sb = this._sandbox;
+                if (prof.$key) {
+                    sb.sdata.destroy("socialProfiles", prof.$key).then(function () {
+                        sb.publish("SocialProfile/Deleted", prof);
+                    });
+                } else {
+                    sb.publish("SocialProfile/Deleted", prof);
+                }
+            }
         },
 
 
@@ -298,13 +387,13 @@ Resources) {
             lang.mixin(data, prof);
             for (var k in data) {
                 // remove object and "special" properties
-                if (typeof (data[k]) == "object" || (k != "$key" && /^\$/.test(k)))
+                if (typeof (data[k]) == "object" || (k != "$key" && k[0] == "$"))
                     delete data[k];
             }
             if (prof.$key) {
-                def = sb.sdata.update("entitySocialProfiles", data);
+                def = sb.sdata.update("socialProfiles", data);
             } else {
-                def = sb.sdata.create("entitySocialProfiles", data).then(function (res) { prof.$key = res.$key });
+                def = sb.sdata.create("socialProfiles", data).then(function (res) { prof.$key = res.$key });
             }
             def.then(lang.hitch(this, function () {
                 if (this._saveQueue && this._saveQueue.length > 0) {

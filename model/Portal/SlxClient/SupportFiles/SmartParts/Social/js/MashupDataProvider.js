@@ -6,17 +6,26 @@
 //   filter is a data object with the following properties:
 //    - query: search query
 //    - users: array of objects with following properties:
-//         - proto 
+//         - proto
 //         - name
 //       They are passed to the mashup, with the parameter name being based on the proto (e.g. "TwitterUser")
+//    - socialProfile: if specified, then the error is reported using a SocialProfile/Error event
 //   Those parameters are passed to the mashup to retrieve the data
 // Raises events:
-//  - Data/Loaded
+//  - Data/Loaded - when the data is loaded this is raised with the array of texts and the filter parameter
+//  - Data/Loading - when the search query is sent, and before we receive the results from the server
+//  - SocialProfile/Error - if there is an error retrieving the data and a social profile object was passed in
 define(['dojo/_base/declare', 'dojo/_base/lang', 'dojo/_base/array', './Model', 'dojo/string', 'dojo/i18n!./nls/Resources'],
 function (declare, lang, array, Model, djString, Resources) {
+    // ensure the URL are prefixed with http to avoid interpreting as a local URL
+    function getUrl(url) {
+        return url && !/^(http|\.\/)/.test(url) ? ("http://" + url) : url;
+    }
+
     return declare(null, {
         _searchMashupName: "",
         _source: null,
+        _searchStatus: null,  // used to be able to cancel an ongoing search
 
         // searchMashup: mashup to use to retrieve the data, it must take a "Search" parameter and have a "AllResults" result
         // source (optional): something to tag the returned entries with so they can easily be manipulated as a group
@@ -30,16 +39,19 @@ function (declare, lang, array, Model, djString, Resources) {
             app.subscribe('Data/Search', lang.hitch(this, "performSearch"));
         },
 
-        performSearch: function (filter, callback) {
+        performSearch: function (filter) {
             // fetch the mashup data then raise a Data/Loaded event
-            // if a callback is specified then the results are passed to it instead of raising the event
-            // (in case of an error the callback is invoked with a "false" parameter)
-            if (typeof console !== "undefined")
-                console.log("Data/Search", filter);
+            //            if (typeof console !== "undefined")
+            //                console.log("Data/Search", filter);
             if (!filter) {
                 this._app.publish("Data/Loaded", []);
                 return;
             }
+            if (this._searchStatus) {
+                this._searchStatus.canceled = true;
+            }
+            this._app.publish("Data/Loading");
+            var searchStatus = this._searchStatus = {};
             var mashupParams = this._prepareMashupParameters(filter);
             mashupParams["format"] = "json";
             mashupParams["count"] = "1000";
@@ -49,38 +61,45 @@ function (declare, lang, array, Model, djString, Resources) {
             var mashupUrl = "slxdata.ashx/$app/mashups/-/mashups('" + this._searchMashupName + "')/$queries/execute";
             var app = this._app;
             this._app.ajax.xhrGet(mashupUrl, mashupParams).then(lang.hitch(this, function (data) {
+                console.log("Loaded data...", data);
                 var texts = data.$resources;
+
+                if (searchStatus.canceled) {
+                    if (typeof console !== "undefined")
+                        console.log("Mashup search canceled");
+                    return;
+                }
 
                 for (var i = 0; i < texts.length; i++) {
                     var status = texts[i];
                     texts[i] = new Model.Status({
                         id: status.StatusID,
-                        url: status.StatusUrl,
-                        icon: 'images/' + status.Icon,
+                        url: getUrl(status.StatusUrl),
+                        icon: 'SmartParts/Social/img/' + status.Icon,
                         text: status.Text,  // status text, this is already escaped for HTML
                         subject: status.Subject,
                         postdate: new Date(parseInt(status.CreatedAt.substr(6))),
                         source: this._source,
+                        socialNetwork: status.SocialNetwork,
+                        favorited: status.Favorited,
                         user: new Model.User({
-                            name: status.User.ScreenName,
+                            screenname: status.User.ScreenName,
+                            name: (status.User.FirstName || "") + " " + status.User.LastName,
                             description: status.User.Description,
                             id: status.User.UserID,
-                            imageUrl: window.location.protocol == "https:" ? status.User.ProfileImageUrlHttps : status.User.ProfileImageUrl,
-                            url: status.User.ProfileUrl || status.User.DefaultProfileUrl
+                            imageUrl: status.User.PictureUrl,
+                            url: getUrl(status.User.ProfileUrl || status.User.DefaultProfileUrl)
                         })
                     });
                 }
-                if (callback && typeof (callback) == "function")
-                    callback(texts);
-                else
-                    app.publish("Data/Loaded", texts);
+                app.publish("Data/Loaded", texts, filter);
             })).then(null, function (err) {
-                if (callback && typeof (callback) == "function") {
-                    callback(false);
+                if (filter.socialProfile) {
+                    app.publish("SocialProfile/Error", filter.socialProfile, err);
                 } else if (filter.users && filter.users.length > 0) {
                     app.error(djString.substitute(Resources.unableToLoadUsersSocialFeedText, { network: filter.users[0].proto }));
                 } else {
-                    app.error(err);
+                    app.error(djString.substitute(Resources.unableToLoadSocialFeedText));
                 }
             });
         },

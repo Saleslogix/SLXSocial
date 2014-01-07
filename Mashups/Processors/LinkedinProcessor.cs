@@ -111,7 +111,7 @@ namespace Saleslogix.Social.Mashups.Processors
 
         private IEnumerable<IRecord> ExecuteCompanySharesSearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
         {
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             // we still call the parameter "LinkedInUser" so we can use the same client-side code as with the user profile mashup
             if (runtimeParams.ContainsKey("LinkedInUser"))
             {
@@ -143,7 +143,7 @@ namespace Saleslogix.Social.Mashups.Processors
 
         private IEnumerable<IRecord> ExecuteCompanySearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
         {
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             if (runtimeParams.ContainsKey("Search"))
                 Search = (String)runtimeParams["Search"];
             if (String.IsNullOrEmpty(Search))
@@ -175,7 +175,7 @@ namespace Saleslogix.Social.Mashups.Processors
 
             String url = String.Format(URL_BUSINESS_PROFILE_API, LinkedInUser);
             url = AddAuthentication(url, auth);
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             String data = Encoding.UTF8.GetString(client.DownloadData(url));
             XDocument xml = XDocument.Parse(data);
             foreach (XElement personNode in xml.Descendants("company"))
@@ -196,7 +196,7 @@ namespace Saleslogix.Social.Mashups.Processors
             }
             String url = String.Format(URL_PROFILE_API, LinkedInUser);
             url = AddAuthentication(url, auth);
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             String data = Encoding.UTF8.GetString(client.DownloadData(url));
             XDocument xml = XDocument.Parse(data);
             foreach (XElement personNode in xml.Descendants("person"))
@@ -207,7 +207,7 @@ namespace Saleslogix.Social.Mashups.Processors
 
         private IEnumerable<IRecord> ExecutePeopleSearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
         {
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             if (runtimeParams.ContainsKey("Search"))
                 Search = (String)runtimeParams["Search"];
             if(String.IsNullOrEmpty(Search))
@@ -225,7 +225,7 @@ namespace Saleslogix.Social.Mashups.Processors
 
         private IEnumerable<IRecord> ExecuteSocialSearch(AuthenticationData auth, IDictionary<string, object> runtimeParams)
         {
-            WebClient client = new WebClient();
+            WebClient client = GetWebClient();
             String url = URL_NETWORK_UPDATES;
             if (runtimeParams.ContainsKey("LinkedInUser") || !String.IsNullOrEmpty(LinkedInUser))
             {
@@ -304,6 +304,11 @@ namespace Saleslogix.Social.Mashups.Processors
                 url += "?";
             url += "oauth2_access_token=" + HttpUtility.UrlEncode(auth.Token);
             return url;
+        }
+
+        private static WebClient GetWebClient()
+        {
+            return new TimeoutWebClient();
         }
     }
 }

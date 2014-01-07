@@ -7,31 +7,39 @@
 * Events in:
 *
 */
-define(['dojo/_base/declare', '../Sandbox', './DefineSocialNetworks', './SocialProfilePanel', './FilterPanel', './SocialProfileModule', '../Utility',
-'dijit/_Widget', 'dijit/_TemplatedMixin'],
-function (declare, Sandbox, DefineSocialNetworks, SocialProfilePanel, FilterPanel, SocialProfileModule, Utility,
-        _Widget, _TemplatedMixin) {
+define(['dojo/_base/declare', 'dojo/_base/lang', '../Sandbox', './SocialProfilePanel', 'dijit/_Widget', 'dijit/_TemplatedMixin',
+'./SocialProfileSelector', './SocialProfileModule', './DefaultPanel', '../Utility',
+"./DefineSocialNetworks"],
+function (declare, lang, Sandbox, SocialProfilePanel, _Widget, _TemplatedMixin,
+    SocialProfileSelector, SocialProfileModule, DefaultPanel, Utility,
+    DefineSocialNetworks) {
 
     var MainView = declare([_Widget, _TemplatedMixin], {
         templateString: "<table style='width: 100%' class='social-profile'>" +
-            "<tr><td data-dojo-attach-point='tdLeft' style='vertical-align: top'></td>" +
+            "<tr><td data-dojo-attach-point='tdLeft' style='vertical-align: top'></td></tr><tr>" +
             "<td data-dojo-attach-point='tdRight' style='width: 100%; vertical-align: top'></td></tr>" +
             "</table>",
+        cmdFilterToolId: "",
+        cmdAddProfileToolId: "",
 
         initModule: function (app) {
             this._app = app;
 
-            var filter = new FilterPanel({ style: "width: 100px", whereNetworkIs: function (net) {
+            var whereNetworkIs = function (net) {
                 // we only want to show the ones that have a profile API
                 return !!net.profileMashupName
-            } 
-            });
+            };
+            var filter = new SocialProfileSelector({ whereNetworkIs: whereNetworkIs, cmdFilterToolId: this.cmdFilterToolId, cmdAddProfileToolId: this.cmdAddProfileToolId });
             this.tdLeft.appendChild(filter.domNode);
-            app.addSubModule(filter);
+            app.addModule(filter);
+
+            var def = new DefaultPanel({ whereNetworkIs: whereNetworkIs });
+            this.tdRight.appendChild(def.domNode);
+            app.addModule(def);
 
             var result = new SocialProfilePanel({ style: "max-height: 300px; overflow: auto" });
             this.tdRight.appendChild(result.domNode);
-            app.addSubModule(result);
+            app.addModule(result);
 
 
             Utility.loadCss("SmartParts/Social/css/Social.css");
@@ -44,18 +52,16 @@ function (declare, Sandbox, DefineSocialNetworks, SocialProfilePanel, FilterPane
     });
 
     var SPApp = declare(Sandbox.Core, {
-        constructor: function (containerNode) {
+        constructor: function (containerNode, cmdFilterToolId, cmdAddProfileToolId) {
             // default extensions
             this.addExtension('ajax', new Sandbox.Ajax());
             this.addExtension('sdata', new Sandbox.SData());
             this.addModule(new Sandbox.AjaxIndicatorModule('asyncpostbackindicator'));
 
-
-            var view = new MainView({}, containerNode);
+            var view = new MainView({ cmdFilterToolId: cmdFilterToolId, cmdAddProfileToolId: cmdAddProfileToolId }, containerNode);
             this.addModule(view);
 
             this.addModule(new SocialProfileModule());
-
             DefineSocialNetworks(this);
         },
 

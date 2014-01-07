@@ -90,6 +90,9 @@
     <Compile Include="Linq\LinqCompiler.cs" />
     <Compile Include="Processors\ISocialExecutor.cs" />
     <Compile Include="Processors\LinkedinProcessor.cs" />
+    <Compile Include="Processors\TimeoutWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Records\Linkedin\LinkedinCompany.cs" />
     <Compile Include="Records\Linkedin\LinkedinCompanyShare.cs" />
     <Compile Include="Records\Linkedin\LinkedinConnectionUpdate.cs" />

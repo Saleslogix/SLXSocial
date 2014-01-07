@@ -12,6 +12,7 @@ public partial class SmartParts_Social_SocialUpdates : EntityBoundSmartPartInfoP
     public override Sage.Platform.Application.UI.ISmartPartInfo GetSmartPartInfo(Type smartPartInfoType)
     {
         ToolsSmartPartInfo ti = new ToolsSmartPartInfo();
+        ti.RightTools.Add(cmdAddProfile);
         ti.RightTools.Add(cmdFilter);
         return ti;
     }
@@ -26,13 +27,15 @@ public partial class SmartParts_Social_SocialUpdates : EntityBoundSmartPartInfoP
         base.OnFormBound();
         ScriptManager.RegisterStartupScript(this, GetType(), "SocialProfileApp", String.Format(@"
 require({{ packages: [ {{ name: 'SLXSocial', location: '../../../SmartParts/Social/js' }} ] }}, 
-    ['SLXSocial/SocialUpdates/App'], 
-    function(SocialUpdatesTab) {{
-        var app = new SocialUpdatesTab(document.getElementById('{0}'), '{1}');
-        app.startAll();
+    ['SLXSocial/SocialUpdates/App', 'dojo/ready'], 
+    function(SocialUpdatesTab, ready) {{
+        ready(10000, function() {{
+            var app = new SocialUpdatesTab(document.getElementById('{0}'), '{1}', '{2}');
+            app.startAll(); 
+        }});
     }}
 );
-", placeholder.ClientID, cmdFilter.ClientID), true);
+", placeholder.ClientID, cmdFilter.ClientID, cmdAddProfile.ClientID), true);
     }
 
 

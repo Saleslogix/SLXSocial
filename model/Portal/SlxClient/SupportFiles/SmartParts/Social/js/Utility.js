@@ -28,6 +28,8 @@ define([], function () {
         } ());
     }
 
+    var dynamicallyLoadedFiles = {};
+
     var Utility = {
         convertDateToUTC: function (date) {
             // summary:
@@ -43,20 +45,36 @@ define([], function () {
             return date;
         },
         escapeHTML: function (s) {
-            return s.split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;");
+            s = s.split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;");
+            s = s.replace(/\n/g, "<br/>");
+            return s;
         },
-        stripHTML: function(html) {
+        stripHTML: function (html) {
             return html.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>?/gi, '');
         },
         loadCss: function (url) {
             // summary:
             //  Dynamically load a stylesheet
+            if (dynamicallyLoadedFiles[url])
+                return;
             var fileref = document.createElement("link");
             fileref.setAttribute("rel", "stylesheet");
             fileref.setAttribute("type", "text/css");
             fileref.setAttribute("href", url);
             document.getElementsByTagName("head")[0].appendChild(fileref);
+        },
+        loadScript: function (url) {
+            // summary:
+            //  Dynamically load a javascript.
+            //  Keep track of what scripts are loaded to prevent loading it twice.
+            if (dynamicallyLoadedFiles[url])
+                return;
+            var fileref = document.createElement("script");
+            fileref.setAttribute("type", "text/javascript");
+            fileref.setAttribute("src", url);
+            document.getElementsByTagName("head")[0].appendChild(fileref);
         }
     };
+
     return Utility;
 });
