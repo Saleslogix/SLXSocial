@@ -184,6 +184,8 @@ function (declare, lang, Deferred, SageDialogs) {
                 return method({
                     url: url,
                     content: data,
+                    // we are going to just go ahead and prevent caching for all requests since it is very rarely going to be useful for us
+                    preventCache: true,
                     handleAs: 'json'
                 }).then(function (data) {
                     sb.publish("Ajax/End");

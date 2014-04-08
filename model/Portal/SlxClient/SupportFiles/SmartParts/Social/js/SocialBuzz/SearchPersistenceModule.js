@@ -30,7 +30,6 @@ function (declare, lang, array) {
                     }
                     return s;
                 });
-                console.log("Read search data", searches);
                 this._app.publish("Data/SearchTabs/Loaded", searches);
             }));
         },

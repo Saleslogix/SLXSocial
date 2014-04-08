@@ -210,6 +210,10 @@ function (declare, djString, lang, _Widget, _TemplatedMixin, _WidgetsInTemplateM
         onTabActivated: function (tab) {
             // perform the search for this tab, or show welcome screen if the tab is the welcome tab
             if (tab.socialSearch === welcomeTab) {
+                if (this._searchPanel.domNode.parentElement) {
+                    // make sure the element is removed first, otherwise IE will error out
+                    this._searchPanel.domNode.parentElement.removeChild(this._searchPanel.domNode);
+                }
                 domConstruct.place(this._searchPanel.domNode, tab.containerNode, "only");
             } else {
                 var filter = tab.socialSearch.getFilter();
@@ -229,7 +233,7 @@ function (declare, djString, lang, _Widget, _TemplatedMixin, _WidgetsInTemplateM
         _onAppStart: function () {
             // check the user's authentication to Twitter (note social network is hard-coded right now)
             var cnf = DefineSocialNetworks(this._app);
-            cnf.Twitter.checkAuthentication();            
+            cnf.Twitter.checkAuthentication();
         },
 
         _onSearchTabsLoaded: function (searches) {
@@ -254,6 +258,9 @@ function (declare, djString, lang, _Widget, _TemplatedMixin, _WidgetsInTemplateM
             // if tab is not provided the tab bar showTab method will be called
             if (!tab)
                 tab = this._tabBar.showTab(filter.tabName || filter.query);
+            if (this._resultPanel.domNode.parentElement) {
+                this._resultPanel.domNode.parentElement.removeChild(this._resultPanel.domNode);
+            }
             domConstruct.place(this._resultPanel.domNode, tab.containerNode, "only");
             filter.tabName = tab.socialSearch.SearchName;
             this._resultPanel.setCurrentFilter(filter);
