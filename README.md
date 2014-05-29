@@ -2,7 +2,7 @@
 
 ## Installation Instructions
 
-1. Copy the DLL Saleslogix.Social.Mashups.dll (from the bundle) to C:\Program Files (x86)\SalesLogix\Platform
+1. Copy the DLL Saleslogix.Social.Mashups.dll (from the bundle) to C:\Program Files (x86)\SalesLogix\Platform.  **Bundle installation will fail with an XML error if that is not done.**
 2. Install the bundle: _Saleslogix Social Buzz_ has the new social tabs.
 3. Optionally, add the following directive to %ALLUSERSPROFILE%\Sage\Platform\Configuration\Global\MashupConfiguration.xml
 (this will allow declaration of other mashups making used of the Linkedin and Twitter providers):  
@@ -43,7 +43,12 @@ Requires access token: true
 Access Url Suffix = /accessToken  
 Access Data String = grant_type=authorization_code&code={TOKEN}&redirect_uri={REDIRECT_URI}&client_id={CLIENTID}&client_secret={CLIENTSECRET}  
 
-When registering the application on LinkedIn developer network, set the default scopes as r_basicprofile, r_fullprofile, r_network, rw_nus
+When registering the application on LinkedIn developer network, set the default scopes as r_basicprofile, r_fullprofile, r_network, rw_nus.  
+You must also specify a valid redirect URL under "OAuth 2.0 Redirect URLs".  The URL must point to the UserOptions.aspx page on the Saleslogix site, 
+for example: http://localhost/SlxClient/UserOptions.aspx.  This address does not necessarily have to be accessible from outside of the network.  It 
+must include the port number if not default (e.g. http://localhost:3001/SlxClient/UserOptions.aspx).
+
+If there are multiple URLs used to access Saleslogix they must all be listed.
 
 # SalesLogix Tabs
 
@@ -74,6 +79,8 @@ Add definition for network in DefineSocialNetwork.js
 
 
 # Change Log
+
+5/29/2014 - Nicolas Galler - Updated search in LinkedIn to prompt for public URL instead of using people search, as the people search API is no longer available.
 
 11/2/2013 - Nicolas Galler - Updated LinktoTwitter library, removed OAuth bundle as it is no longer necessary with 8.0 HF4
 
