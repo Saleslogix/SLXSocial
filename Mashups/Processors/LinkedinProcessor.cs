@@ -23,9 +23,11 @@ namespace Saleslogix.Social.Mashups.Processors
     {
         private const String LINKEDIN_OAUTHPROVIDER_NAME = "LinkedIn";
         private const String URL_NETWORK_UPDATES = "https://api.linkedin.com/v1/people/~/network/updates?scope=self";
-        private const String URL_NETWORK_UPDATE_BYMEMBER = "https://api.linkedin.com/v1/people/id={0}/network/updates?scope=self";
+        private const String URL_NETWORK_UPDATE_BYMEMBER = "https://api.linkedin.com/v1/people/url={0}/network/updates?scope=self";
         private const String URL_PEOPLE_SEARCH = "https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,picture-url,headline,public-profile-url))?keywords={0}&sort=relevance";
-        private const String URL_PROFILE_API = "https://api.linkedin.com/v1/people/id={0}:(id,first-name,last-name,picture-url,headline,public-profile-url,formatted-name,location:(name),industry,summary,specialties,positions,educations)";
+        //private const String URL_PROFILE_API = "https://api.linkedin.com/v1/people/id={0}:(id,first-name,last-name,picture-url,headline,public-profile-url,formatted-name,location:(name),industry,summary,specialties,positions,educations)";
+        // we use the public profile URL to retrieve the full profile
+        private const String URL_PROFILE_API = "https://api.linkedin.com/v1/people/url={0}:(id,first-name,last-name,picture-url,headline,public-profile-url,formatted-name,location:(name),industry,summary,specialties,positions,educations)";
         private const String URL_COMPANY_SEARCH_API = "https://api.linkedin.com/v1/company-search:(companies:(id,name,square-logo-url,logo-url))?keywords={0}&sort=relevance";
         private const String URL_BUSINESS_PROFILE_API = "https://api.linkedin.com/v1/companies/{0}:(id,name,ticker,website-url,specialties,square-logo-url,logo-url,employee-count-range,locations:(description,address:(city,state)),description,founded-year,end-year)";
         private const String URL_COMPANY_SHARES_API = "https://api.linkedin.com/v1/companies/{0}/updates";
@@ -58,13 +60,15 @@ namespace Saleslogix.Social.Mashups.Processors
 
         private String _linkedInUser;
         /// <summary>
-        /// User id to display updates from.  Note this is the LinkedIn internal user id (a short alphanumeric string), NOT the user's name or email address
+        /// User id to display updates from.  
+        /// For persons, this is actually the user's public profile URL, not their ID (which is not readily accessible through LinkedIn's UI).
+        /// For companies, this is the company id.
         /// </summary>
         [SRDescription("Linkedin_LinkedInUser_Description")]
         public String LinkedInUser
         {
             get
-            {
+            {                
                 return this._linkedInUser;
             }
             set
@@ -95,6 +99,7 @@ namespace Saleslogix.Social.Mashups.Processors
                 case "Social":
                     return ExecuteSocialSearch(auth, runtimeParams);
                 case "People":
+                    // people search - this is not working since LinkedIN restricted the API
                     return ExecutePeopleSearch(auth, runtimeParams);
                 case "Profile":
                     return ExecuteProfileSearch(auth, runtimeParams);
@@ -194,9 +199,13 @@ namespace Saleslogix.Social.Mashups.Processors
             {
                 throw new Exception("This method requires a LinkedInUser parameter");
             }
-            String url = String.Format(URL_PROFILE_API, LinkedInUser);
+            if (!LinkedInUser.StartsWith("http"))
+                LinkedInUser = "http://" + LinkedInUser;
+
+            String url = String.Format(URL_PROFILE_API, HttpUtility.UrlEncode(LinkedInUser));
             url = AddAuthentication(url, auth);
             WebClient client = GetWebClient();
+            
             String data = Encoding.UTF8.GetString(client.DownloadData(url));
             XDocument xml = XDocument.Parse(data);
             foreach (XElement personNode in xml.Descendants("person"))
@@ -232,6 +241,9 @@ namespace Saleslogix.Social.Mashups.Processors
                 object specifiedMemberId;
                 if (!runtimeParams.TryGetValue("LinkedInUser", out specifiedMemberId))
                     specifiedMemberId = LinkedInUser;
+
+                if (!((String)specifiedMemberId).StartsWith("http"))
+                    specifiedMemberId = String.Format("http://{0}", specifiedMemberId);
                 url = String.Format(URL_NETWORK_UPDATE_BYMEMBER, specifiedMemberId);
             }
             url = AddAuthentication(url, auth);

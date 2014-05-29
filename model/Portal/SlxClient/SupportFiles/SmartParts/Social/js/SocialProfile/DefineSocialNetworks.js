@@ -1,5 +1,5 @@
-﻿define(['./SocialNetworkConfiguration'],
-function (SocialNetworkConfiguration) {
+﻿define(['./SocialNetworkConfiguration', 'dojo/i18n!../nls/Resources'],
+function (SocialNetworkConfiguration, Resources) {
     return function (app) {
         var ctxService = Sage.Services.getService('ClientEntityContext');
         var ctx = ctxService.getContext();
@@ -27,7 +27,9 @@ function (SocialNetworkConfiguration) {
                 inactiveImageUrl: "SmartParts/Social/img/LinkedIn_Logo60px_Inactive.png",
                 name: "LinkedIn",
                 signupUrl: "https://www.linkedin.com",
-                userSearchMashupName: "LinkedInPeopleSearch",
+                userNameLabel: Resources.lblLinkedInUrl,
+                userNamePrefix: "http://",
+                userSearchMashupName: null,  // not available for contact
                 updateFeedMashupName: "LinkedInSocialFeed",
                 profileMashupName: "LinkedInProfile",
                 entityId: entityId
@@ -39,6 +41,8 @@ function (SocialNetworkConfiguration) {
             inactiveImageUrl: "SmartParts/Social/img/twitter48_Inactive.png",
             signupUrl: "https://www.twitter.com/signup",
             name: "Twitter",
+            userNameLabel: Resources.lblScreenName,
+            userNamePrefix: "@",
             userSearchMashupName: null,  // not needed for twitter
             updateFeedMashupName: "TwitterSearch",
             entityId: entityId

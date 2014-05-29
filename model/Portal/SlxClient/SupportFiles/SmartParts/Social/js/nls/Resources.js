@@ -61,6 +61,7 @@
         socialProfileInvalidUserWithProfileLink: "You do not have access to that user's feed - <a href='${url}' target='_blank'>visit their profile</a> on the social site to connect with them",
         lblPersonSearch: "Person Search",
         lblScreenName: "@Screen Name",
+        lblLinkedInUrl: "LinkedIn Profile Url <br/>(find on <a href='http://linkedin.com' target='_blank'>LinkedIn</a>)",
         moreThan1MatchPleaseSelectUser: "More than 1 users match this name - please select the appropriate one:",
         notConfigured: "Not configured",
         userPictureText: "User Picture",

@@ -70,8 +70,8 @@ Resources) {
                 this._txtUsername = new TextBox({ value: this.socialProfile.SocialUserName });
             } else {
                 // in this case we are only prompting for a handle
-                domConstruct.place("<label class='lbl'>" + Resources.lblScreenName + ":</label>", this._divUserInput);
-                this._txtUsername = new TextBox({ value: "@" + (this.socialProfile.SocialUserName || "") });
+                domConstruct.place("<label class='lbl'>" + this.socialProfile.socialNetwork.userNameLabel + ":</label>", this._divUserInput);
+                this._txtUsername = new TextBox({ value: this.socialProfile.socialNetwork.userNamePrefix + (this.socialProfile.SocialUserName || "") });
             }
             var txtDiv = document.createElement("div");
             txtDiv.className = "textcontrol";
