@@ -12,43 +12,7 @@
 
 ## Social Network Configuration
 
-Twitter and LinkedIn are both supported but must be configured under Administration -> Authentication Providers, then the users 
-need to authorize the service under Tools -> Options.
-
-For Twitter, the provider must be named "Twitter OAuth", and the parameters are as follows:
-
-Provider URL = https://api.twitter.com  
-OAuth Version = 1.0  
-Request URL suffix: /oauth/request_token  
-Request token method: POST  
-Supports Callback: true  
-Secret: consumer secret obtained when registering Twitter application  
-Client ID: client id obtained when registering Twitter application  
-Host URL: https://api.twitter.com  
-Approval URL Suffix: /oauth/authenticate  
-Requires access token: true  
-Access Url Suffix: /oauth/access_token  
-
-For LinkedIn, the provider must be named "LinkedIn", and configured as follows:  
-
-Provider URL = https://www.linkedin.com/uas/oauth2  
-OAuth Version = 2.0  
-Supports Callback = true  
-Secret = consumer secret obtained when registering LinkedIn application  
-Client Id = client id obtained when registering LinkedIn application  
-Host Url = https://www.linkedin.com/uas/oauth2  
-Approval Url Suffix = /authorization  
-User Data String = ?response_type=code&client_id={CLIENTID}&state={STATE}&redirect_uri={REDIRECT_URI}  
-Requires access token: true  
-Access Url Suffix = /accessToken  
-Access Data String = grant_type=authorization_code&code={TOKEN}&redirect_uri={REDIRECT_URI}&client_id={CLIENTID}&client_secret={CLIENTSECRET}  
-
-When registering the application on LinkedIn developer network, set the default scopes as r_basicprofile, r_fullprofile, r_network, rw_nus.  
-You must also specify a valid redirect URL under "OAuth 2.0 Redirect URLs".  The URL must point to the UserOptions.aspx page on the Saleslogix site, 
-for example: http://localhost/SlxClient/UserOptions.aspx.  This address does not necessarily have to be accessible from outside of the network.  It 
-must include the port number if not default (e.g. http://localhost:3001/SlxClient/UserOptions.aspx).
-
-If there are multiple URLs used to access Saleslogix they must all be listed.
+The OAuth providers for the social network will be configured on the "Social Setup" page which will open the first time the Social Buzz screen is accessed.
 
 # SalesLogix Tabs
 
