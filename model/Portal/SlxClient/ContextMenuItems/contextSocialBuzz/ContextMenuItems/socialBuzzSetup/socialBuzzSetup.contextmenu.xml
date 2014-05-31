@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<MenuDropDownItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="fe9532fa-b5dc-44e7-938e-85204dcf23cf">
+  <ItemId>socialBuzzSetup</ItemId>
+  <NavUrl>SocialSetup.aspx</NavUrl>
+  <LargeImageUrl />
+  <SmallImageUrl />
+  <ContextMenuId />
+  <Target />
+  <AppliedSecurity>Administration/View</AppliedSecurity>
+</MenuDropDownItem>
